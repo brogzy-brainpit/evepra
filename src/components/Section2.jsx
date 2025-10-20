@@ -3,6 +3,7 @@ import SlideUpElement from '@/effects/SlideUpElement'
 import Heading2 from '@/typography/Heading2'
 import { motion } from 'framer-motion'
 import React from 'react'
+import { SwipeableCards } from './SwipeableCards'
 
 function Section2() {
     const cards=[
@@ -75,6 +76,7 @@ function Section2() {
              })}
             </div>
     </div>
+    <SwipeableCards/>
 
    </div>
     

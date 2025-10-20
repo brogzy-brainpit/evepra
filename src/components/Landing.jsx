@@ -9,8 +9,8 @@ import Heading2 from '@/typography/Heading2';
 
 function Landing({preLoaderOut}) {
   return (
-    <div className='relative h-svh bg-red300 p-4 box-border'>
-      <div className='bg-purple-500 overflow-hidden relative h-full rounded-3xl [cursor:url("	https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb09ef00eb464b45496_cursor-text.svg")_9_19,text]'>
+    <div className='relative h-svh bg-red300 p-0 md:p-2 box-border'>
+      <div className='bg-purple-500 overflow-hidden relative h-full rounded-none md:rounded-2xl [cursor:url("	https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb09ef00eb464b45496_cursor-text.svg")_9_19,text]'>
 {/* <div className={'bg-red-500 h-full grid grid-cols-6 lg:grid-cols-12 gap-[1.25rem] lg:gap-[2.5rem]'}> */}
   <GridColumn className={'bg-red-500 h-full'}>
 
