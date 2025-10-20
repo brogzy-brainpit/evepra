@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 
 const cards = [
@@ -17,7 +17,7 @@ const cards = [
     title: "Jordan Chen",
     age: 26,
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/diverse-friends-city-cafe-trjrPcJB5WUSprmit38.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/diverse-friends-city-cafe-trjrPcJB5aZ2Bq7SGWf5WUSprmit38.png",
     label: "Artist | Traveler | Foodie",
   },
   {
@@ -48,19 +48,6 @@ const cards = [
 
 export function SwipeableCards() {
   const [current, setCurrent] = useState(0)
-  const [scaleFactor, setScaleFactor] = useState(1)
-  const [swipeThreshold, setSwipeThreshold] = useState(120)
-
-  // ✅ Dynamically recalculate based on screen size
-  useEffect(() => {
-    const updateScale = () => {
-      setScaleFactor(Math.min(window.innerWidth / 430, 1))
-      setSwipeThreshold(window.innerWidth < 640 ? 60 : 120)
-    }
-    updateScale()
-    window.addEventListener("resize", updateScale)
-    return () => window.removeEventListener("resize", updateScale)
-  }, [])
 
   const handleSwipe = (direction) => {
     if (direction === "right") {
@@ -72,26 +59,31 @@ export function SwipeableCards() {
 
   return (
     <div className="flex items-center justify-center w-full h-screen bg-black overflow-hidden">
-      <div className="relative w-[60vw] max-w-[340px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[480px] aspect-[3/4] select-none">
+      <div className="relative w-[330px] h-[520px] select-none">
         {cards.map((card, index) => {
-          const offset = (index - current + cards.length) % cards.length
+          const offset = (index - current + cards.length) % cards.length // wrap-around
           let scale = 1 - Math.abs(offset) * 0.06
-          let y = offset * 40 * scaleFactor
+          let y = offset * 40
           let rotate = offset * 4
-          let x = offset * 50 * scaleFactor
+          let x = offset * 50
 
-          // ✅ Custom layout tweaks
-          if (offset === 4 || offset === 3) {
-            rotate = offset === 4 ? 14 : 20
-            scale = offset === 4 ? 0.88 : 0.8
-            x = offset === 4 ? 50 * scaleFactor : 100 * scaleFactor
+          // custom tweak for visibility
+          if (offset === 4 || offset ===3) {
+            // side cards (2 & 5)
+            // rotate =offset===4? offset * 5:offset * 10
+            rotate =offset===4? 14:20
+              scale=offset===4? 0.88:0.8;
+            x = offset === 4 ? 50 : 100
             y = 0
           }
-
           if (offset === 1 || offset === 2) {
-            rotate = offset === 1 ? -14 : -20
-            scale = offset === 1 ? 0.88 : 0.8
-            x = offset === 2 ? -100 * scaleFactor : -50 * scaleFactor
+            // middle ones (3 & 4)
+          // rotate =offset===1? offset * -10:offset * -20
+            rotate =offset===1? -14:-20
+
+          scale=offset===1? 0.88:0.8;
+            // x =  -60
+            x = offset === 2 ? -100 : -50
             y = 0
           }
 
@@ -99,21 +91,22 @@ export function SwipeableCards() {
             <motion.div
               key={card.id}
               className="cursor-[url('https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef4b_cursor-drag.svg'),_grab] absolute top-0 left-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border-2 border-white"
-              style={{
-                zIndex: (() => {
-                  let z = cards.length - offset
-                  if (offset === 3) z = 1
-                  if (offset === 4) z = 2
-                  return z
-                })(),
-                transformOrigin: "center",
-              }}
+             style={{
+  zIndex: (() => {
+    let z = cards.length - offset
+    if (offset === 3) z = 1
+    if (offset === 4) z = 2
+    return z
+  })(),
+  transformOrigin: "center",
+}}
+
               animate={{
                 scale,
                 y,
                 x,
                 rotate,
-                opacity: 1,
+                opacity: 1, // full opacity for all cards
               }}
               transition={{
                 type: "spring",
@@ -123,8 +116,8 @@ export function SwipeableCards() {
               drag={offset === 0 ? "x" : false}
               dragConstraints={{ left: 0, right: 0 }}
               onDragEnd={(_, info) => {
-                if (info.offset.x > swipeThreshold) handleSwipe("right")
-                if (info.offset.x < -swipeThreshold) handleSwipe("left")
+                if (info.offset.x > 120) handleSwipe("right")
+                if (info.offset.x < -120) handleSwipe("left")
               }}
             >
               <img
@@ -133,12 +126,14 @@ export function SwipeableCards() {
                 draggable={false}
                 className="w-full h-full object-cover pointer-events-none select-none"
               />
-
+              <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+             {offset}
+             </div>
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                <h2 className="text-white text-lg sm:text-xl font-semibold">
+                <h2 className="text-white text-lg font-semibold">
                   {card.title}, {card.age}
                 </h2>
-                <span className="bg-white/20 text-white text-xs sm:text-sm px-2 py-1 rounded-md">
+                <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-md">
                   {card.label}
                 </span>
               </div>

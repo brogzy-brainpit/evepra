@@ -35,7 +35,7 @@ function Section2() {
   ]
   return (
     <section className="bg-pink-400 pt-4 ">
-   <div className='container px-5 mx-auto  '>
+   <div className='container px5 mx-auto  '>
     <div className=' flex justify-center items-center'>
       <div className='max-w-[50em]  lg:max-w-[50em] relative'>
     <Heading2 className={'!text-balance !text-black col-start-3 col-span-8 '}>
