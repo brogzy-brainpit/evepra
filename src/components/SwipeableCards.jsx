@@ -71,8 +71,8 @@ export function SwipeableCards() {
   }
 
   return (
-    <div className="flex items-center justify-center w-full h-screen bg-black overflow-hidden">
-      <div className="relative w-[60vw] max-w-[340px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[480px] aspect-[3/4] select-none">
+    <div className="py-10 flex items-center justify-center w-full overflow-hidden">
+      <div className="relative w-[65vw] max-w-[340px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[480px] aspect-[3/4] select-none">
         {cards.map((card, index) => {
           const offset = (index - current + cards.length) % cards.length
           let scale = 1 - Math.abs(offset) * 0.06
@@ -98,7 +98,7 @@ export function SwipeableCards() {
           return (
             <motion.div
               key={card.id}
-              className="cursor-[url('https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef4b_cursor-drag.svg'),_grab] absolute top-0 left-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border-2 border-white"
+              className="cursor-[url('https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef4b_cursor-drag.svg'),_grab] absolute top-0 left-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border-4 border-white"
               style={{
                 zIndex: (() => {
                   let z = cards.length - offset
