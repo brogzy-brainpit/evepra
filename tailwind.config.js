@@ -36,6 +36,7 @@ module.exports = {
         'para': 'clamp(1.2em, 1vw + 0.5em, 2em)',
         'heading1': 'clamp(3em, 6.5vw + 0.5em, 9em)',
         'heading2': 'clamp(2.5em, 5.5vw + 0.5em, 7em)',
+        'heading3': 'clamp(2em, 3.5vw + 0.5em, 5em)',
         'display': 'clamp(130px, 33vw, 490px)',
         'footer': 'clamp(40px, 9vw, 80px)',
       },

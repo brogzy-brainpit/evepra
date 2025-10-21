@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, useTransform, useScroll, useSpring, useInView} from "framer-motion";
+import Heading2 from '@/typography/Heading2';
 
 
 function Section5
@@ -51,7 +52,7 @@ function Section5
     <div className=' text-white min-h-screen flex items-center'>
       
       <section className='relative py-20 container mx-auto overflo-x-hidden bgpurple-400 '>
-       <h2 className='mb-40 text-neutral-900 break-words text-[3em]  lg:text-[5em] leading-[0.95] tracking-[-0.03em] lowercase text-center justify-center font-custom font-black flex flex-wrap'>
+       <Heading2 className='mb-40 !text-black font-custom'>
       
    
     <span className='mr-[0.3em]'>call</span>
@@ -67,7 +68,7 @@ function Section5
    
 {/* <TitleLineSvg/> */}
 
-  </h2>
+  </Heading2>
        <div className=' flex bg-slate600 justify-center items-center lg:flex-row flex-col relative'>
          {cards.map((card,i)=>{
           return (
