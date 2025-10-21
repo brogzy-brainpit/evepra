@@ -65,17 +65,17 @@ function footer() {
   </div>
 
 
-<div className='relative overflow-hidden'>
+<div className='relative h-[200px] lg:h-[300px] overflow-hidden'>
    <h1
-  className=" font-custom text-center flex justify-center font-bold circular text-display leading-[1] lg:leading-[0.9]  text-white"
+  className=" absolute bottom-0 translate-y-[25%] lg:translate-y-[30%]  font-custom text-center flex justify-center font-bold tracking-[0em]   text-display leading[1] lgleading-[0.9]  text-white"
 >
  
   {/* alfred */}
   <SlideUpElement stiffness={110} damping={8} delay={0.04} gap='0px' once={false} >
   
-    {'a l f r e d'.split(' ').map((word)=>{
+    {'e v e p r a'.split(' ').map((word)=>{
       return (
-    <span className='text-displa text-center tracking-[-8px] lg:tracking-[0px]'>{word}</span>
+    <span className='text-displa text-center '>{word}</span>
 
       )
     })}

@@ -91,7 +91,7 @@ const Text = ({isTabletOrMobile,index,word,current,range,rangeForOnscroll}) => {
 
   // const y = useTransform(current, range, [30, 0]);
   // const minusy = useTransform(current, range, [-28, 0]);
-  const origy = useTransform(current, range, [5, -18,0]);
+  const origy = useTransform(current, range, [40, -18,0]);
    const y = useSpring(origy, { stiffness: 120, damping: 30, mass: 0.3 });
   const minus = useTransform(current, range, [-60,18, 0]);
    const minusy = useSpring(minus, { stiffness: 120, damping: 30, mass: 0.3 });
