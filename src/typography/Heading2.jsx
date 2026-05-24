@@ -1,11 +1,11 @@
 import React from "react";
 import clsx from "clsx";
 
-function Heading2({ children, className }) {
+function Heading2({ children, className,...props }) {
   return (
     <h2
       className={clsx(
-        "text-white break-word text-heading2 leading-[0.95] tracking-[-0.03em] lowercase text-center justify-center font-custom font-black flex flex-wrap",
+        "text-white breakword text-heading2 leading-[0.95] tracking-[-0.03em] lowercase text-center justify-center font-custom font-black flex flex-wrap",
         className
       )}
     >

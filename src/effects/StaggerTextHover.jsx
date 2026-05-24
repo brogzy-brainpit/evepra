@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function StaggerTextHover({ text, activeColor = "#fff", className = "" }) {
+export default function StaggerTextHover({ text, activeColor = "#fff", className = "", preLoaderOut}) {
   const parent = {
     exit: {
       transition: { staggerChildren: 0.07, staggerDirection: -1 }, // reverse order
@@ -51,7 +51,8 @@ export default function StaggerTextHover({ text, activeColor = "#fff", className
     <motion.h1
       initial="initial"
       exit="exit"
-      animate="enter"
+      // animate={'enter'}
+      animate={preLoaderOut?'enter':'initial'}
       whileHover="hover"
       variants={parent}
       className={`${className} overflow-hidden`}

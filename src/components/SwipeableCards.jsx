@@ -72,7 +72,7 @@ export function SwipeableCards() {
 
   return (
     <div className="py-10 flex items-center justify-center w-full overflow-hidden">
-      <div className="relative w-[65vw] max-w-[340px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[480px] aspect-[3/4] select-none">
+      <div className="relative w-[65vw]  sm:max-w-[14em] md:max-w-[20em] lg:max-w-[25em] aspect-[3/4] select-none">
         {cards.map((card, index) => {
           const offset = (index - current + cards.length) % cards.length
           let scale = 1 - Math.abs(offset) * 0.06

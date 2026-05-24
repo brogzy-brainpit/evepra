@@ -17,18 +17,19 @@ import GridColumn from "@/layout/GridColumn";
 import Heading2 from "@/typography/Heading2";
 import SlideUpElement from "@/effects/SlideUpElement";
 import { useMediaQuery } from "react-responsive";
+import { useHeaderColor } from "@/providers/ColorProvider";
 
 const Section1 = () => {
 
   return (  
      <HorizontalScrollCarousel />
-
   );
 };
 
 const HorizontalScrollCarousel = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
   const targetRef = useRef(null);
+  // const isTabletOrMobile = useState(true)
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset:['start start', 'end end']
@@ -39,7 +40,7 @@ const HorizontalScrollCarousel = () => {
       // ;console.log(1-scrollYProgress.current)
     })
   })
-  const x = useTransform(scrollYProgress, [0, 1], [isTabletOrMobile?'150%':'90%', isTabletOrMobile?'-90%':'-70%']);
+  const x = useTransform(scrollYProgress, [0, 1], [isTabletOrMobile?'150%':'122%', isTabletOrMobile?'-90%':'-70%']);
   const swiftx = useSpring(x, { stiffness: 120, damping: 30, mass: 0.3 });
 const texts=['h e l p i n g','l a n d','s c r a p e r s','s u c c e e d']
   return (
@@ -62,17 +63,11 @@ const texts=['h e l p i n g','l a n d','s c r a p e r s','s u c c e e d']
             const end=start + (1/total)*0.8
 
 
-
           return <Text isTabletOrMobile={isTabletOrMobile} current={scrollYProgress} rangeForOnscroll={[start,end,end+0.3]} range={[start,end,end+0.1]} rang={[index* 0.125,(index* 0.125)*0.125+(index* 0.125+0.1)]} word={word} wowrd={(index* 0.125)+1-scrollYProgress.current} index={index}  key={index} />;
           })}
           </motion.h2> 
  {/* {isTabletOrMobile && <p>You are a tablet or mobile phone</p>} */}
 
-
-<Paragraph className="text-black z-[9] px-5 pt-[80px] bg-slate600  lg:col-start-4 col-span-full lg:col-span-6 text-center">
-
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus impedit magnam quis voluptatum aperiam aspernatur recusandae porro. Ad optio impedit itaque cupiditate error est earum voluptatibus nisi vero iusto. Animi?
-</Paragraph>
 
    </GridColumn>
    {/* </div> */}
@@ -109,7 +104,7 @@ const Text = ({isTabletOrMobile,index,word,current,range,rangeForOnscroll}) => {
         {/* <img src='/truus/circle.svg' className='!w-[150%]'/> */}
   <motion.svg xmlns="http://www.w3.org/2000/svg" width="50%" viewBox="0 0 140 127" fill="none" class="horizontal-words__arrow-end-svg">
   <motion.path whileInView={{pathLength:1}} initial={{pathLength:0}} transition={{duration:0.9,ease:'easeOut'}} d="M2.03125 2.42188C100.469 2.42188 130.156 52.4219 118.437 125.078L99.6875 107.891" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></motion.path>
-  <motion.path whileInView={{pathLength:1}} initial={{pathLength:0}} transition={{duration:0.9,ease:'easeOut'}} d="M2.03125 2.42188C100.469 2.42188 130.156 52.4219 118.438 125.078L137.969 110.234" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="stroke-dashoffset: 0; stroke-dasharray: 212.766px, 13.4808px;">
+  <motion.path whileInView={{pathLength:1}} initial={{pathLength:0}} transition={{duration:0.9,ease:'easeOut'}} d="M2.03125 2.42188C100.469 2.42188 130.156 52.4219 118.438 125.078L137.969 110.234" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
   </motion.path></motion.svg>
       </div>:index==2?  <div className='z-[8] cursor-pointer absolute top-0 translate-y-[80%] translate-x-[85%]'>
         {/* <ScaleUpContent once={false} damping={5} > */}

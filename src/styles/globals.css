@@ -4,13 +4,17 @@
 [data-scroll-container] {
   overflow-y: auto !important; 
 } */
+ .perspective{
+  perspective: 130px;
+  perspective-origin: bottom;
+ }
 ::selection {
     background-color: #F0BEFA;
     color: #000000;
     text-shadow: none;
 }
 .mask-gradient{
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
 }
 html {
    font-feature-settings: normal;

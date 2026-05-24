@@ -1,20 +1,20 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { SwipeableCards } from './SwipeableCards'
 import Heading2 from '@/typography/Heading2'
 import Heading3 from '@/typography/Heading3'
-import { motion} from "framer-motion";
-
+import { motion, useInView} from "framer-motion";
+import { useHeaderColor } from '@/providers/ColorProvider';
 
 function Section3() {
   return (
-    <div className='min-h-svh bg-black py-20'>Section3
+    <div className='min-h-svh bg-black py-20'>
 <SwipeableCards/>
     <div className='relative flex justify-center items-center'>
-   <div className='max-w-[50em]  lg:max-w-[60em] relative'>
-   <Heading3 className="text-balance">
+   <div className='max-w-[40em] lg:max-w-[50em] relative'>
+   <Heading3 className="text-balance justify-center">
   <span>We are a </span>
   <em className="relative inline-block font-custom2 font-light">
-    <span>young, </span>
+    <span className='ml-[0.2em]'>young, </span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
@@ -33,11 +33,11 @@ function Section3() {
     </svg>
   </em>
 
-  <span>future-proof team of 49 </span>
+  <span >future-proof team of 49 </span>
   <span>&nbsp;digitally native </span>
 
   <em className="relative inline-block font-light font-custom2">
-    <span>wunderkinder.</span>
+    <span className='ml-[0.2em]' >wunderkinder.</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"

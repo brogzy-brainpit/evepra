@@ -3,8 +3,9 @@ import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-function Column({ direction = "up", className = "", items }) {
+export default function Marquee({items,direction='up',className=''}) {
   const y = useMotionValue(0);
+  const x = useMotionValue(0);
   const [hovered, setHovered] = useState(false);
   const [itemHeight, setItemHeight] = useState(0);
   const refs = useRef([]);
@@ -44,27 +45,30 @@ function Column({ direction = "up", className = "", items }) {
 
   return (
     <div
-      className={`overflow-hidden h-full flex flex-col gap-2 ${className}`}
+      className={` hfull bg-green-700 max-h-[300px] flex flex-col gap-2 ${className}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       <motion.div
-        className="flex flex-col gap-4 h-full justify-center items-center bg-green-400"
+        className="flex flex-col gap-4 hfull justify-center items-center "
         style={{ y }}
       >
-        {[...items, ...items].map((item, i) => (
+        {[...items,...items,...items,...items,...items].map((item, i) => (
           <div
             key={i}
             ref={(el) => (refs.current[i] = el)}
-            className="h-[280px]  max-w-[95%]"
+            className="lg:h-[200px] lg:w-[200px]  h-[130px] w-[180px] maxw-[95%] bg-red-400"
           >
+            <div style={{backgroundColor:item.bg}} className="p-4 h-full" >
+
               <Image
                 src={item.src}
                 alt=""
                 width={500}
                 height={500}
-                className="rounded-lg  w-full object-cover object-top"
+                className="rounded-lg  w-full h-full object-cover object-top"
               />
+            </div>
           </div>
         ))}
       </motion.div>
@@ -72,38 +76,4 @@ function Column({ direction = "up", className = "", items }) {
   );
 }
 
-export default function MarqueeGrid() {
 
-  const items1 = [
-    { type: "image", src: "/images/service01.png" },
-    { type: "image", src: "/images/service05.png" },
-    { type: "image", src: "/images/service04.png" },
-  ];
-   const items2 = [
-    { type: "image", src: "/images/service05.png" },
-    { type: "image", src: "/images/service02.png" },
-    { type: "image", src: "/images/service03.png" },
-  ];
-
-  const items3 = [
-    { type: "image", src: "/images/4.jpg"  },
-    { type: "image", src: "/videos/vid4.mp4" },
-    { type: "image", src: "/images/1.jpeg"  },
-  ];
-
-  const items4 = [
-    { type: "image", src: "/images/5.jpg" },
-     { type: "video", src: "/videos/vid3.mp4" },
-    { type: "image", src: "/images/7.jpeg" },
-  ];
-
-  return (
-    <div className="grid overflow-hidden h-full grid-cols-2 md:grid-cols-2 gap-[2px] px-[4px] md:gap-[8px]">
-      <Column items={items1} direction="up" />
-      <Column items={items2} direction="down" />
-      {/* hidden on mobile, visible from md up */}
-      {/* <Column items={items3} direction="up" className="hidden md:flex" />
-      <Column items={items4} direction="down" className="hidden md:flex" /> */}
-    </div>
-  );
-}

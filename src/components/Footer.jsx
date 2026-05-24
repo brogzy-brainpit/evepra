@@ -65,9 +65,9 @@ function footer() {
   </div>
 
 
-<div className='relative h-[200px] lg:h-[300px] overflow-hidden'>
+<div className='flex justify-center relative h-[200px] lg:h-[300px] overflow-hidden'>
    <h1
-  className=" absolute bottom-0 translate-y-[25%] lg:translate-y-[30%]  font-custom text-center flex justify-center font-bold tracking-[0em]   text-display leading[1] lgleading-[0.9]  text-white"
+  className=" absolute bottom-0 translate-y-[50%] lg:translate-y-[20%]  font-custom text-center flex justify-center font-bold tracking-[0em]   text-display leading[1] lgleading-[0.9]  text-white"
 >
  
   {/* alfred */}

@@ -1,10 +1,13 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const HeaderColorContext = createContext();
 
 export function ColorProvider({ children }) {
-  const [activeSection, setActiveSection] = useState("default");
+  const [activeSection, setActiveSection] = useState("landing");
+  useEffect(()=>{
+setActiveSection('landing') 
+  },[])
   return (
     <HeaderColorContext.Provider value={{ activeSection, setActiveSection }}>
       {children}

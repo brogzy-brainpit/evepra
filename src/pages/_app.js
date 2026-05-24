@@ -7,6 +7,7 @@ import "../styles/fonts.css";
 import "../styles/mostHave.css";
 import "../styles/globals.css";
 import "../styles/embla.css";
+import "../styles/menu.css";
 import Footer from "@/components/Footer";
 
 const Sans = DM_Sans({

@@ -18,16 +18,19 @@ const textOpacity={
 }
 const menuSlide={
     initial:{
-       y: '0%',
+    //    y: '0%',
+    clipPath:'inset(0 40% 0 40%)',
         
     }, 
     enter:{
-        y:'0%',
+        // y:'0%',
+        clipPath:'inset(0 40% 0 40%)',
      transition:{duration:0.8, ease:[0.76, 0, 0.24, 1]},
 
     },
      exit:{
-        y:'-100%',
+        clipPath:'inset(50% 50% 50% 50%)',
+        // y:'-100%',
         transition:{duration:0.8, ease:[0.76, 0, 0.24, 1]},
 
     },
@@ -45,9 +48,9 @@ function Preloader() {
         }, index==0?1400:170);
     },[index])
   return (
-    <motion.div variants={menuSlide} initial="initial" exit="exit" className=' z-preloader  fixed  flex flex-col items-center justify-center w-screen top-0 left-0 h-screen bg-black'> 
+    <motion.div variants={menuSlide} initial="initial" exit="exit" className=' z-preloader  fixed  flex flex-col items-center justify-center w-screen top-0 left-0 h-screen bg-white'> 
    <div className='h-full w-full relative flex items-center justify-center flex-col'>
-   <motion.p className='text-[8vw] text-white capitalize  z-30 font-custom2 italic text-regular ' variants={textOpacity} animate="enter" initial="initial" exit="exit">
+   <motion.p className='text-[8vw] text-[#2D7864 ]capitalize  z-30 font-custom2 italic text-regular ' variants={textOpacity} animate="enter" initial="initial" exit="exit">
     {words[index]}
     </motion.p>
 
