@@ -103,7 +103,7 @@ function Landing({preLoaderOut}) {
     <motion.span variants={child} className='mr-[0.2em] inline-block'>we</motion.span>
     <motion.span variants={child} className='relative mr-[0.2em] inline-block'>
       <div className='cursor-pointer absolute top-0 translate-y-[-45%] translate-x-[45%]'>
-        <ScaleUpContent damping={5} >
+        <ScaleUpContent delay={3} damping={5} >
 <Magnetic >
 
         <img initial={{x:80,scale:0}} animate={{x:0,scale:1}} transition={{duration:0.6,ease:'easeOut'}}   src='/assets/bucket.svg' className='w-[40px] h-[40px] lg:size-[1.4em]'/>
@@ -113,11 +113,11 @@ function Landing({preLoaderOut}) {
       bring</motion.span>
     
     <motion.span variants={child} className='mr-[0.2em] relative inline-block font-custom2 font-normal leading-[0.5] italic text-regular loratest'>
-        <div className='cursor-pointer absolute top-0 left-0 translate-y-[-45%] translate-x-[105%]'>
-        <ScaleUpContent damping={5} >
+        <div className='cursor-pointer absolute top-0 left-0 translate-y-[-65%] translate-x-[105%]'>
+        <ScaleUpContent delay={4} damping={5} >
 <Magnetic >
 
-        <img initial={{x:80,scale:0}} animate={{x:0,scale:1}} transition={{duration:0.6,ease:'easeOut'}}   src='/assets/camera.svg' className='w-[40px] h-[40px] lg:size-[1.4em]'/>
+        <img initial={{x:80,scale:0}} animate={{x:0,scale:1}} transition={{duration:0.6,ease:'easeOut'}}   src='/assets/camera.svg' className='w-[40px] h-[40px] lg:size-[1.2em]'/>
 </Magnetic>
         </ScaleUpContent>
       </div>
