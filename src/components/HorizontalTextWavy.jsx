@@ -10,8 +10,8 @@ import { useHeaderColor } from "@/providers/ColorProvider";
 
 export const random = (min=-40, max=200) => Math.random() * (max - min) + min;
 
-const texts = "car detailing service at it's finest".split(" ");
-
+const texts = "We make cars feel new again.".split(" ");
+const paragraph = "Your vehicle deserves more than a quick wash. We restore deep shine, refined interiors, and that fresh-off-the-lot feeling with meticulous detailing designed to revive every drive. Book your detailing today."
 const HorizontalTextWavy = () => {
   const { setActiveSection } = useHeaderColor();
  
@@ -111,7 +111,7 @@ const opacity =useSpring(useTransform(scrollYProgress, [.9,.95], [0,1]),{ stiffn
         <motion.h2
           ref={textRef}
           style={{ x:swiftx }}
-          className="whitespace-nowrap text-brand-black font-bold font-custom text-[5.5em] lg:text-[10em] leading-[0.95] tracking-[.02em]"
+          className="whitespace-nowrap text-brand-black font-bold font-custom text-heading1 leading-[0.95] tracking-[.02em]"
         >
           {letters.map((l, i) => {
             const total= letters.length
@@ -145,10 +145,6 @@ const opacity =useSpring(useTransform(scrollYProgress, [start,end], [0,1]),{ sti
       }
       return <span  key={l.key} className="relative h-max">
       {i==8?<span className='cursor-pointer w-full absolute bottom-0  translate-y-[55%] translate-x-[85%]'>
-        {/* <motion.svg className="horizontal-words__arrow-svg w-[2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386 127" fill="none" >
-        <motion.path style={{pathLength:opacity}} initial={{pathLength:0}} transition={{duration:0.9,ease:'easeOut'}} d="M2 123C9 35.9999 84.5 17 124 25.9999C217.764 47.3635 207 115 177.5 123C105.777 142.45 110.737 1.99991 232.5 2C310.5 2.00006 366.5 79 376 118L356.5 105.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ></motion.path>
-        <motion.path style={{pathLength:opacity}}  initial={{pathLength:0}} transition={{type:'spring',stiffness:120,mass:0.3,damping:30,duration:0.9,ease:'easeOut'}} d="M2 123C9 35.9999 84.5 17 124 25.9999C217.764 47.3635 207 115 177.5 123C105.777 142.45 110.737 1.99991 232.5 2C310.5 2.00006 366.5 79 376 118L384 97" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ></motion.path>
-        </motion.svg> */}
           <motion.svg className="w-[2.4em] lg:w-[2em]" style={{rotateX:200,rotate:8}} xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 386 127" fill="none">
           <motion.path style={{pathLength:opacity(start,.4)}}  initial={{pathLength:0}} transition={{duration:0.9,ease:'easeOut'}} d="M2 123C9 35.9999 84.5 17 124 25.9999C217.764 47.3635 207 115 177.5 123C105.777 142.45 110.737 1.99991 232.5 2C310.5 2.00006 366.5 79 376 118L356.5 105.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ></motion.path>
           <motion.path 
@@ -159,7 +155,10 @@ const opacity =useSpring(useTransform(scrollYProgress, [start,end], [0,1]),{ sti
           {/* the smile icon */}
            {/* the smile icon */}
       {i==2?<span className='z-50 cursor-pointer w-full absolute bottom-0 left-0 translate-y-[40%] translate-x-[45%]'>
-      <motion.img initial={{scale:0}} whileInView={{scale:1.4,rotate:-20}} transition={{type:'spring',damping:6,stiffness:120}}   src='/truus/smile.svg' className='size-[8em] lg:size-[9em]'/>
+      <motion.img initial={{scale:0}} whileInView={{scale:3.4,rotate:-20}} transition={{type:'spring',damping:6,stiffness:120}}   src='/assets/brush.svg' className='size-[8em] lg:size-[9em]'/>
+      </span>:''} 
+      {i==8?<span className='z-50 cursor-pointer w-full absolute bottom-0 left-0 translate-y-[40%] translate-x-[45%]'>
+      <motion.img initial={{scale:0}} whileInView={{scale:2,rotate:-20}} transition={{type:'spring',damping:6,stiffness:120}}   src='/assets/car.svg' className='size-[8em] lg:size-[9em]'/>
       </span>:''}
 
            {/* the phone icon */}
@@ -194,7 +193,7 @@ const opacity =useSpring(useTransform(scrollYProgress, [start,end], [0,1]),{ sti
           <div className="relative h-full w-full">
         <motion.div style={{opacity}} className="absolute  flex flex-col items-center justify-centr h-full w-full left- bottom-0 translate-y-[50%] lg:translate-y-[55%]">
             <motion.p  className="mb-4 text-para text-center text-brand-black font-body text-balance max-w-[32em]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam cupiditate et error tempora cum expedita odio, accusantium, enim excepturi beatae. Voluptatem eius, aperiam distinctio quo eveniet odit dicta hic!
+              {paragraph}
             </motion.p>
             <CustomBtn>
               click me

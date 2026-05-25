@@ -106,7 +106,7 @@ const scaleMenu= {
   ];
 
   return (
-    <div className="mix-blend-differenc fixed top-[3%] w-full z-[50]">
+    <div className="mix-blend-differenc fixed top-[1%] w-full z-[50]">
       <header
      
         ref={ref}
@@ -130,7 +130,10 @@ const scaleMenu= {
               <Magnetic>
               <Link scroll={false}
                 key={title}
-                className="cursor-pointer ont-custom text-white text-links capitalize"
+                  style={{
+    color: activeColor,
+  }}
+                className="cursor-pointer font-body  text-para capitalize"
                 href={`/${url}`}
               >
             {title}
@@ -207,13 +210,16 @@ const scaleMenu= {
     <motion.h2 className={` z-20 cursor-pointer flex items-center justify-center bg-orange500 w-full pointer-events-none relative z10 text-[16px] font-custom uppercase font-bold text-center`} animate={{ color: menutextt }}
       transition={{ duration: 0.6, ease: "easeInOut" }}>
   
-    <motion.div animate={{ backgroundColor: menutextt, }}
-     className={clsx(
-            "before:bg-orange-600 after:bg-orange-600  burger",
-            burgerMenu?"burgerActive":"", 
-          )}
-     >
-  
+ <motion.div
+
+  style={{
+    '--burger-color': menutextt,
+  }}
+  className={clsx(
+    'burger',
+    burgerMenu ? 'burgerActive' : ''
+  )}
+>
 
   </motion.div>
 

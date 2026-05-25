@@ -26,11 +26,11 @@ function PageContent() {
     contact: secondaryColor,
   };
   const menutext = {
-    default: whiteColor,
-    landing: whiteColor,
-    Section1: secondaryColor,
-    Section2: whiteColor,
-    contact: secondaryColor,
+    default: secondaryColor,
+    landing: secondaryColor,
+    Section1: whiteColor,
+    Section2: secondaryColor,
+    contact: whiteColor,
   };
   
 const activeheaderColor= menubg[activeSection] || "#fff";

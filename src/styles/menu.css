@@ -16,6 +16,10 @@ border-radius: 50px;
     top: -5px;
     width: 18px;
 }
+.burger::before,
+.burger::after {
+  background-color: var(--burger-color);
+}
 
 
 /* .burgerActive::before{
