@@ -7,12 +7,13 @@ import { motion, useInView } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
 import InteractiveCard from './InteractiveCards'
 import { useHeaderColor } from '@/providers/ColorProvider'
+import Image from 'next/image'
 
 function Section2() {
    
     const cards=[
     {title:'card 1',
-      img:'/images/service02.png',
+      img:'/assets/brand/01.jpg',
       background:'#10b981',
       color:"white",
       left:-20,
@@ -20,7 +21,7 @@ function Section2() {
       offers:['offer card 1', 'offer card 2','offer card 3','offer card 4','offer card 5',]
     },
     {title:'card 2',
-      img:'/images/service01.png',
+      img:'/assets/brand/02.jpg',
       background:'rgb(46, 109, 188)',
       color:"white",
       left:10,
@@ -29,7 +30,7 @@ function Section2() {
       offers:['offer card 1', 'offer card 2','offer card 3','offer card 4']
     },
     {title:'card 3',
-      img:'/images/service03.png',
+      img:'/assets/brand/03.jpg',
       background:'#9333ea',
       color:"white",
       left:-16,
@@ -78,7 +79,7 @@ function Section2() {
              <InteractiveCard key={i}
               style={{rotate:card.left,backgroundColor:card.background,y:card.y}}
                className={` ${ i!==0?'-ml-10':''} w-[9em] h-[12em] md:w-[16em] md:h-[20em]  overflow-hidden shadow-lg flex flex-col justify-center   text-white rounded-xl`}>
-               <img src={card.img} className='w-full h-full object-cover'/>
+               <Image width={600} height={800} src={card.img} className='w-full h-full object-cover'/>
                
              </InteractiveCard>
      
