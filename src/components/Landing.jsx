@@ -112,7 +112,16 @@ function Landing({preLoaderOut}) {
       </div>
       bring</motion.span>
     
-    <motion.span variants={child} className='mr-[0.2em] inline-block font-custom2 font-normal leading-[0.5] italic text-regular loratest'>showroom</motion.span>
+    <motion.span variants={child} className='mr-[0.2em] relative inline-block font-custom2 font-normal leading-[0.5] italic text-regular loratest'>
+        <div className='cursor-pointer absolute top-0 left-0 translate-y-[-45%] translate-x-[105%]'>
+        <ScaleUpContent damping={5} >
+<Magnetic >
+
+        <img initial={{x:80,scale:0}} animate={{x:0,scale:1}} transition={{duration:0.6,ease:'easeOut'}}   src='/assets/camera.svg' className='w-[40px] h-[40px] lg:size-[1.4em]'/>
+</Magnetic>
+        </ScaleUpContent>
+      </div>
+      showroom</motion.span>
     <motion.span variants={child} className='mr-[0.2em] inline-block'>quality</motion.span>
     <motion.span variants={child} className='mr-[0.2em] inline-block'>to </motion.span>
     <motion.span variants={child} className='mr-[0.2em] inline-block'>daily</motion.span>
