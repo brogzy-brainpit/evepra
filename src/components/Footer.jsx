@@ -71,6 +71,12 @@ function footer() {
     <div className="absolute top-0 translate-x-[30%] left-0 w-full h-full flex items-center justify-center">
 <img src="/assets/bucket.svg" className='w-[6em]' alt="Logo"/>
     </div>
+    <div className="absolute top-0 translate-x-[-10%] left-0 w-full h-full flex items-center justify-center">
+<img src="/assets/camera.svg" className='w-[6em]' alt="Logo"/>
+    </div>
+     <div className="absolute top-0 translate-x-[80%] left-0 w-full h-full flex items-center justify-center">
+<img src="/assets/paint.svg" className='w-[6em]' alt="Logo"/>
+    </div>
  <StaggerTextHover inView={true} className='w-full'/>
   </div>
 
