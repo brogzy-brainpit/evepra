@@ -68,7 +68,10 @@ function footer() {
 
 <div className='flex flex-col justify-center relative h[200px] lg:h-[300px] overflow-hidden'>
    <div className="relative h-ft w-full bgblack text-white p10 [clip-path:inset(0_0_25%_0)]" >
- <StaggerTextHover className='w-full'/>
+    <div className="absolute top-0 translate-x-[30%] left-0 w-full h-full flex items-center justify-center">
+<img src="/assets/bucket.svg" className='w-[6em]' alt="Logo"/>
+    </div>
+ <StaggerTextHover inView={true} className='w-full'/>
   </div>
 
   <div className=" absolut bottom-0 left-0 bgbrand-accent py-4 md:py-[30px] flex gap-2  w-full ">
