@@ -6,6 +6,7 @@ import { Facebook, FacebookIcon, Instagram, Linkedin } from 'lucide-react'
 import { motion } from 'framer-motion'
 import SlideUpElement from '@/effects/SlideUpElement'
 import Display from '@/typography/Display'
+import StaggerTextHover from '@/effects/StaggerTextHover'
 
 function footer() {
   const texts=[
@@ -65,24 +66,12 @@ function footer() {
   </div>
 
 
-<div className='flex justify-center relative h-[200px] lg:h-[300px] overflow-hidden'>
-   <h1
-  className=" absolute bottom-0 translate-y-[50%] lg:translate-y-[20%]  font-custom text-center flex justify-center font-bold tracking-[0em]   text-display leading[1] lgleading-[0.9]  text-white"
->
- 
-  {/* alfred */}
-  <SlideUpElement stiffness={110} damping={8} delay={0.04} gap='0px' once={false} >
-  
-    {'e v e p r a'.split(' ').map((word)=>{
-      return (
-    <span className='text-displa text-center '>{word}</span>
+<div className='flex flex-col justify-center relative h[200px] lg:h-[300px] overflow-hidden'>
+   <div className="relative h-ft w-full bgblack text-white p10 [clip-path:inset(0_0_25%_0)]" >
+ <StaggerTextHover className='w-full'/>
+  </div>
 
-      )
-    })}
-  </SlideUpElement>
-
-</h1>
-  <div className=" absolute bottom-0 bg-brand-secondary py-4 md:py-[50px] flex gap-2  w-full ">
+  <div className=" absolut bottom-0 left-0 bgbrand-accent py-4 md:py-[30px] flex gap-2  w-full ">
   {/* Left side - stacked items */}
        <div className={`w-full  items-start gap-2 flex`}>
          
@@ -100,8 +89,10 @@ function footer() {
   
          
           
-  </div>
+
 </div>
+</div>
+
    
 
 

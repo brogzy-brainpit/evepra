@@ -101,7 +101,7 @@ const opacity =useSpring(useTransform(scrollYProgress, [.9,.95], [0,1]),{ stiffn
   return (
     <section
       ref={targetRef}
-      className="relative h-[600svh]  bg-brand-white"
+      className="relative h-[400svh] md:h-[500svh] lg:h-[500svh]  bg-brand-white"
     >
       
       <div className="sticky top-0 h-svh pt-20 pb-5 lg:pt-20 lg:pb-10 overflow-hidden flex items-start">
@@ -134,10 +134,10 @@ const opacity =useSpring(useTransform(scrollYProgress, [.9,.95], [0,1]),{ stiffn
           //     const start = i / total;
           // const end = start + 1 / total;
 const x =useSpring(useTransform(scrollYProgress, [progressPoint(.50),end], [random(55,85), 0]),{ stiffness: 200, damping: 30, mass: 0.3 })
-const options=[isTabletOrMobile?-80:-100,isTabletOrMobile?80:150]
+const options=[isTabletOrMobile?-80:-200,isTabletOrMobile?80:200]
 const rand= options[Math.floor(Math.random()* options.length)]
-const y =useSpring(useTransform(scrollYProgress, [start,progressPoint(.60),end], [rand,-rand*.5, 0]),{ stiffness: 190, damping: 20, mass: 0.3 })
-const rotate =useSpring(useTransform(scrollYProgress, [start,progressPoint(.9),end], [random(-15,15),random(-12,10), 0]),{ stiffness: 190, damping: 30, mass: 0.3 })
+const y =useSpring(useTransform(scrollYProgress, [progressPoint(.30),progressPoint(.80),end], [rand,-rand*.5, 0]),{ stiffness: 190, damping: 10, mass: 0.3 })
+const rotate =useSpring(useTransform(scrollYProgress, [progressPoint(.34),progressPoint(.80),end], [random(-25,25),random(-12,10), 0]),{ stiffness: 190, damping: 10, mass: 0.3 })
 
 const opacity=(start,end)=>{
 const opacity =useSpring(useTransform(scrollYProgress, [start,end], [0,1]),{ stiffness: 190, damping: 30, mass: 0.3 })

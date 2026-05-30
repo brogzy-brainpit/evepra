@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useSpring, useVelocity, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import HoverText from "@/effects/HoverText";
 import FlipTextEffect from "@/effects/FlipTextEffect";
@@ -89,13 +89,23 @@ const scaleMenu= {
   // ✅ use framer-motion's useScroll, not drei
   const { scrollY } = useScroll();
   const speedRotate = useVelocity(scrollY);
-  const scrollMarker = useSpring(speedRotate, {
-    stiffness: 120,
-    damping: 30,
-    mass: 0.3,
-  });
-  // scale down the crazy values
-  const rotation = useTransform(scrollMarker, v => v * 0.07);
+  const [docHeight, setDocHeight] = useState(2000);
+
+useEffect(() => {
+  const updateHeight = () => {
+    setDocHeight(document.body.scrollHeight - window.innerHeight);
+  };
+
+  updateHeight();
+  window.addEventListener("resize", updateHeight);
+
+  return () => window.removeEventListener("resize", updateHeight);
+}, []);
+const smoothes = useTransform(scrollY, [0, docHeight], [0, 3000]);
+const rotation = useSpring(smoothes, {
+  stiffness: 120,
+  damping: 20,
+});
 // const rotation = useTransform(scrollMarker, [0, 1], [30, 3360]);
   const [burgerMenu, setBurgerMenu] = useState(false);
 
@@ -119,13 +129,13 @@ const scaleMenu= {
       exit={{y:"-100%"}}
       transition={{duration:0.4,delay:0}}
         className=" bg-red300 shadowlg backdropblur-lg  roundedfull w-full flex items-center justify-between py-2">
-          <Link href={"/"} className="z-20 overflow-visible  text-center font-custom text-2xl">
+          <Link href={"/"} className="flex-1 z-20 overflow-visible  text-center font-custom text-2xl">
             {/* <h2 className={"relative circular font-bold text-white text-4xl leading-[1] flex items-end"}>alfred <span className="absolute bottom-1 -right-[10px] ml-[4px] w-[8px] h-[8px] rounded-full bg-white"></span></h2> */}
-       <StaggerTextHover preLoaderOut={preLoaderOut} activeColor={activeColor } className="relative font-custom font-bold text-brand-secondary text-4xl leading-[1] tracking-tighter " text={["E", "v", "e" ,"p", "r" ,"a",'*']}/>
+       <StaggerTextHover preLoaderOut={preLoaderOut} activeColor={activeColor } className="relative w-[7em] " text={["E", "v", "e" ,"p", "r" ,"a",'*']}/>
       
  </Link>
 
-          <ul className= " hidden md:flex flex-row gap-6 mx-auto">
+          <ul className= " flex-1 hidden justify-center md:flex flex-row gap-6 mx-auto">
             {Links.map(({ title, url }) => (
               <Magnetic>
               <Link scroll={false}
@@ -147,8 +157,9 @@ const scaleMenu= {
 
 
            {/* <Magnetic> */}
+<div className="flex-1 flex justify-end items-center relative z-20">
 
-            <div className="relative bg-blue500">
+            <div className="relative bg-blue500 ">
               <motion.div variants={menu} animate={burgerMenu?'opened':'closed'} exit="closed" initial="closed" className="z-10 absolute overflow-clip    rounded-[1em] bg-brand-secondaryy box-border ">
      <AnimatePresence>
         {burgerMenu &&  <div className="h-full">
@@ -227,6 +238,7 @@ const scaleMenu= {
          
 </motion.div>
             </div>
+</div>
           {/* </Magnetic> */}
 
 

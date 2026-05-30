@@ -38,7 +38,7 @@ export default function InteractiveCard({ children, className = "", style = {} }
       y: moveY,
       rotateX,
       rotateY,
-      transition: { type: "spring", stiffness: 120, damping: 10 },
+      transition: { type: "spring", stiffness: 220, damping: 10 },
     })
 
     setTimeout(() => {
