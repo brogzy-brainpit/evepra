@@ -26,7 +26,7 @@ function footer() {
   <div className="flex gap-2 breaker my-6 ">
   {/* Right side - single 50% item */}
   <div className="breaker-child  px-4  items-start justify-end md:justify-start flex   w-[68%]  ">
-         <SlideUpText duration={0.5} delay={0.04} className=' text-white font-custom font-bold text-[20px] md:text-[30px] leading-[40px] uppercase' text={'hello@domain.com'}/>  
+         <SlideUpText duration={0.5} delay={0.04} className=' text-white font-custom font-bold text-[20px] md:text-[30px] leading-[40px] uppercase' text={'hello@reserve.com'}/>  
           </div>
             <div className="breaker-child px-4  items-start justify-end flex w-[68%]  ">
          <SlideUpText duration={0.5} delay={0.04} className=' text-white font-custom font-bold text-[20px] md:text-[30px] leading-[40px] uppercase' text={'+(234)9063260237'}/>  

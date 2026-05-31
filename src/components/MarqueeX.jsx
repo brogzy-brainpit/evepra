@@ -34,7 +34,7 @@ export default function MarqueeX({items,direction='left',className=''}) {
   //     ? baseSpeed * 0.25 * (scrollDir === "down" ? 1 : -1)
   //     : baseSpeed * (scrollDir === "down" ? 1 : -1);
   const speed =
-    direction === "left" ? (hovered ? -10 : -40) : hovered ? 10 : 40;
+    direction === "left" ? (hovered ? -30 : -40) : hovered ? 30 : 40;
   const baseSpeed = direction === "up" ? -40 : 40;
   useAnimationFrame((_, delta) => {
     if (!itemHeight) return;
@@ -69,14 +69,14 @@ export default function MarqueeX({items,direction='left',className=''}) {
             {/* <Heading2>
               brogzy-brainpit-developers
             </Heading2> */}
-            <div style={{backgroundColor:item.bg}} className="p-4 h-full" >
+            <div style={{backgroundColor:item.bg}} className="p-4 h-full flex items-center justify-center" >
 
               <Image
                 src={item.src}
                 alt=""
                 width={500}
                 height={500}
-                className="rounded-lg  w-full h-full object-cover object-top"
+                className="rounded-lg  w-[8em] h-[8em] object-cover object-top"
               />
             </div>
           </div>
