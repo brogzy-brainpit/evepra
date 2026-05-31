@@ -7,22 +7,24 @@ import Marquee from './Marquee';
 import MarqueeX from './MarqueeX';
 import Heading2 from '@/typography/Heading2';
 import { useHeaderColor } from '@/providers/ColorProvider';
+import { useMediaQuery } from 'react-responsive';
 
 function Section4(){
+   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
   return (
     <div   className="min-h-screen h-screen w-full bgpurple-400">
     <Section container={false} padding={false} className={'h-full w-full  pt-10 pb-5 lg:py-10'}>
 <GridColumn className={'h-full w-full bgpink-900'}>
   <div className='p-5 py-20 lg:col-span-7 col-span-full bgpink-400  relative'>
-    <img src='/truus/butterfly.svg'  className='z-[2] w-[50%] absolute top-0  translate-x-[20%] translate-y-[20%]'/>
- <Heading2 className=' relative z-[3] lg:max-w-[80%] bgred-400 !justify-start !text-left !text-neutral-900 text-[3em]  lg:text-[5em] leading-[0.95] tracking-[-0.03em] lowercase font-custom font-black'>
+    <img src='/truus/butterfly.svg'  className='z-[2] w-[50%] absolute top-0 left-[-20%] lg:left-[0] translate-x-[10%]  lg:translate-x-[20%] translate-y-[20%]'/>
+ <Heading2 className=' relative z-[3] lg:max-w-[80%] bgred-400 !justify-center !text-center !text-neutral-900 text-[3em]  lg:text-[5em] leading-[0.95] tracking-[-0.03em] lowercase font-custom font-black'>
     <span className='mr-[0.3em]'>proud</span>
     <span className='mr-[0.3em]'>to</span>
     <span className='mr-[0.3em]'>have</span>
     <span className='mr-[0.3em]'>worked</span>
      <span className=' relative mr-[0.3em]  font-custom2 font-normal italic text-regular'>
       <div className='w-full absolute bottom-0 left-0 translate-y-[100%] translate-x-[0%] mr-[0.3em] inline-block'>
-        <motion.svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 169 10" fill="none" class="draw-btn__svg"><motion.path initial={{pathLength:0}} whileInView={{pathLength:1}} transition={{duration:0.6,ease:'easeOut'}} d="M1 6.5661C56.3941 3.06082 112.187 1.20095 168 0.999878" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path>
+        <motion.svg className="w-[2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 10" fill="none" ><motion.path initial={{pathLength:0}} whileInView={{pathLength:1}} transition={{duration:0.6,ease:'easeOut'}} d="M1 6.5661C56.3941 3.06082 112.187 1.20095 168 0.999878" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path>
         <motion.path initial={{pathLength:0}} whileInView={{pathLength:1}} transition={{duration:0.6,ease:'easeOut',delay:0.6}} d="M32.1313 8.63371C68.2147 6.92799 104.462 6.13378 140.695 6.25107" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path></motion.svg>
       </div>
       on</span>
@@ -32,10 +34,10 @@ function Section4(){
   </Heading2>
 
   
- <span  className=' hidden lg:block z-[1] w-[50%] absolute bottom-0   translate-x-[60%] translate-y-[-20%]'>
+ <span  className=' hidde block z-[1] lg:w-[50%] w-[20%] absolute bottom-0 left-[20%]  translate-x-[-10%] translate-y-[-90%]  lg:translate-x-[60%] lg:translate-y-[-20%]'>
    <div   className='lg:scale-x-[-1]'>
-     <motion.svg style={{rotate:170,}} xmlns="http://www.w3.org/2000/svg" width="300px" viewBox="0 0 386 127" fill="none"><motion.path whileInView={{pathLength:1}} initial={{pathLength:0}} transition={{duration:0.9,ease:'easeOut'}} d="M2 123C9 35.9999 84.5 17 124 25.9999C217.764 47.3635 207 115 177.5 123C105.777 142.45 110.737 1.99991 232.5 2C310.5 2.00006 366.5 79 376 118L356.5 105.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ></motion.path><motion.path 
-     whileInView={{pathLength:1}}  initial={{pathLength:0}} transition={{type:'spring',stiffness:120,mass:0.3,damping:30,duration:0.9,ease:'easeOut'}} d="M2 123C9 35.9999 84.5 17 124 25.9999C217.764 47.3635 207 115 177.5 123C105.777 142.45 110.737 1.99991 232.5 2C310.5 2.00006 366.5 79 376 118L384 97" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ></motion.path></motion.svg>
+     <motion.svg className="w-[12em] lg:w-[400px] "  style={{rotate:isTabletOrMobile ? 40 : 150,}} xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 386 127" fill="none"><motion.path whileInView={{pathLength:1}} initial={{pathLength:0}} transition={{duration:1,ease:'easeOut'}} d="M2 123C9 35.9999 84.5 17 124 25.9999C217.764 47.3635 207 115 177.5 123C105.777 142.45 110.737 1.99991 232.5 2C310.5 2.00006 366.5 79 376 118L356.5 105.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ></motion.path><motion.path 
+     whileInView={{pathLength:1}}  initial={{pathLength:0}} transition={{duration:1,ease:'easeOut'}} d="M2 123C9 35.9999 84.5 17 124 25.9999C217.764 47.3635 207 115 177.5 123C105.777 142.45 110.737 1.99991 232.5 2C310.5 2.00006 366.5 79 376 118L384 97" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ></motion.path></motion.svg>
 
 </div>
 </span>
