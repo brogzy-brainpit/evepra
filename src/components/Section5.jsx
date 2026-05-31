@@ -71,7 +71,7 @@ function Section5
 {/* <TitleLineSvg/> */}
 
   </Heading2>
-       <div className=' flex bg-slate600 justify-center items-center lg:flex-row flex-col relative'>
+       <div className=' flex bg-slate600 justify-center items-center lg:flex-row flex-col gap-[10em] lg:gap-0 relative'>
          {cards.map((card,i)=>{
           return (
        <InteractiveCard
