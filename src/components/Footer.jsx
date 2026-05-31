@@ -19,7 +19,7 @@ function footer() {
     }
   ]
   return (
-    <div className='bg-brand-secondary w-full relative  flex gap-2 flex-col '>
+    <div className='bg-brand-secondary w-full relative py-4  flex gap-2 flex-col '>
 
       <section className=' relative mt-4 w-full h-full gap-6 container-section container mx-auto'>
 
@@ -93,15 +93,19 @@ function footer() {
   {/* Left side - stacked items */}
        <div className={`w-full  items-start gap-2 flex`}>
          
-         <p  className=' text-white font-body  text-para  leading-para uppercase'><FacebookIcon className='w-4 h-4'/></p>
-         <p  className=' text-white font-body  text-para  leading-para uppercase'><Linkedin className='w-4 h-4'/></p>
-         <p  className=' text-white font-body  text-para  leading-para uppercase'><Instagram className='w-4 h-4'/></p>
-       
-
+         <p  className=' text-white font-body  text-para  leading-para uppercase'>
+          <img src='/assets/insta.svg' className='w-6 h-6 lg:w-8 lg:h-8 '/>
+          </p>
+           <p  className=' text-white font-body  text-para  leading-para uppercase'>
+          <img src='/assets/tiktok.svg' className='w-6 h-6 lg:w-8 lg:h-8 '/>
+          </p>
+           <p  className=' text-white font-body  text-para  leading-para uppercase'>
+          <img src='/assets/whatsapp.svg' className='w-6 h-6 lg:w-8 lg:h-8 '/>
+          </p>
           </div>
             <div className={`w-full items-center justify-end flex`}>
          
-         <p  className=' text-white font-body  text-para  leading-para capitalize'>code by memet </p>
+         <p  className=' text-white font-custom  text-para  capitalize'>code by memet </p>
 
           </div>
   
