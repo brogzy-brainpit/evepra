@@ -25,7 +25,7 @@ function Section4(){
         <motion.svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 169 10" fill="none" class="draw-btn__svg"><motion.path initial={{pathLength:0}} whileInView={{pathLength:1}} transition={{duration:0.6,ease:'easeOut'}} d="M1 6.5661C56.3941 3.06082 112.187 1.20095 168 0.999878" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path>
         <motion.path initial={{pathLength:0}} whileInView={{pathLength:1}} transition={{duration:0.6,ease:'easeOut',delay:0.6}} d="M32.1313 8.63371C68.2147 6.92799 104.462 6.13378 140.695 6.25107" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path></motion.svg>
       </div>
-      with</span>
+      on</span>
    
 {/* <TitleLineSvg/> */}
 
@@ -45,22 +45,22 @@ function Section4(){
    <div className='overflow-hidden w-full h-full hidden lg:flex justify-center gap-4 '>
 
    <Marquee direction='down' items={[
-   { type: "image", src: "/images/service01.png",bg:'orange' },
-   { type: "image", src: "/images/service05.png",bg:'#F4683B' },
-   { type: "image", src: "/images/service04.png",bg:'#E6FAB7' },
+   { type: "image", src: "/assets/carslogo/bmw.svg",bg:'orange' },
+   { type: "image", src: "/assets/carslogo/mercedez.svg",bg:'#F4683B' },
+   { type: "image", src: "/assets/carslogo/aston.svg",bg:'#82A0FF' },
  ]} />
  
  <Marquee direction='up' items={[
-   { type: "image", src: "/images/service01.png",bg:'orange' },
-   { type: "image", src: "/images/service05.png",bg:'#819FFF' },
-   { type: "image", src: "/images/service04.png",bg:'pink' },
+     { type: "image", src: "/assets/carslogo/ferrari.svg",bg:'#4968EF' },
+    { type: "image", src: "/assets/carslogo/tesla.svg",bg:'grey' },
+    { type: "image", src: "/assets/carslogo/jeep.svg",bg:'#A33D62' },
  ]} />
    </div>
    <div className='overflow-hidden w-full h-full flex '>
     <MarqueeX direction='left' items={[
-    { type: "image", src: "/images/service01.png",bg:'#4968EF' },
-    { type: "image", src: "/images/service05.png",bg:'grey' },
-    { type: "image", src: "/images/service04.png",bg:'#A33D62' },
+    { type: "image", src: "/assets/carslogo/dodge.svg",bg:'#4968EF' },
+    { type: "image", src: "/assets/carslogo/audi.svg",bg:'grey' },
+    { type: "image", src: "/assets/carslogo/lambo.svg",bg:'#A33D62' },
   ]} />
 
    </div>

@@ -66,18 +66,27 @@ function footer() {
   </div>
 
 
-<div className='flex flex-col justify-center relative h[200px] lg:h-[300px] overflow-hidden'>
+<div className='flex flex-col justify-center relative h[200px] lg:h-[300px] overflow-x-clip'>
+   <div className="relative h-ft w-full bgblack text-white p10" >
    <div className="relative h-ft w-full bgblack text-white p10 [clip-path:inset(0_0_25%_0)]" >
-    <div className="absolute top-0 translate-x-[30%] left-0 w-full h-full flex items-center justify-center">
-<img src="/assets/bucket.svg" className='w-[6em]' alt="Logo"/>
-    </div>
-    <div className="absolute top-0 translate-x-[-10%] left-0 w-full h-full flex items-center justify-center">
-<img src="/assets/camera.svg" className='w-[6em]' alt="Logo"/>
-    </div>
-     <div className="absolute top-0 translate-x-[80%] left-0 w-full h-full flex items-center justify-center">
-<img src="/assets/paint.svg" className='w-[6em]' alt="Logo"/>
-    </div>
  <StaggerTextHover inView={true} className='w-full'/>
+    </div>
+    <div className='absolute top-0 bgpurple-400 w-full h-full'>
+
+    <div className="absolute top-[10%] translate-y-[30%] translate-x-[30%] left-0 w-full h-full flex items-center justify-center">
+<img src="/assets/bucket.svg" className='w-[10vw] lg:w-[6vw]' alt="Logo"/>
+    </div>
+    <div className="absolute top-[-70%] translate-y-[30%] translate-x-[-70%] left-[30%] w-full h-full flex items-center justify-center">
+<img src="/assets/camera.svg" className='w-[10vw] lg:w-[8vw]' alt="Logo"/>
+    </div>
+     <div className="absolute top-[10%] translate-y-[20%] translate-x-[-40%] left-[20%] w-full h-full flex items-center justify-center">
+
+<img src="/assets/time.svg" className='w-[10vw] lg:w-[6vw]' alt="Logo"/>
+    </div>
+     <div className="absolute top-0 translate-x-[20%] left-0 w-full h-full flex items-center justify-center">
+<img src="/assets/eyes.svg" className='w-[10vw] lg:w-[8vw]' alt="Logo"/>
+    </div>
+    </div>
   </div>
 
   <div className=" absolut bottom-0 left-0 bgbrand-accent py-4 md:py-[30px] flex gap-2  w-full ">

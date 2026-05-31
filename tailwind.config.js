@@ -26,7 +26,7 @@ module.exports = {
       },
          fontSize:{
         'button': 'clamp(14px, 3.5vw, 18px)',
-        'para': 'clamp(1em, 1.4vw + 0.2em, 2em)',
+        'para': 'clamp(1em, 1.2vw + 0.2em, 2em)',
         'heading1': 'clamp(3em, 10vw, 12em)',
         'heading2': 'clamp(2.5em, 5vw + 0.5em, 6em)',
         'heading3': 'clamp(2em, 2.5vw + 0.5em, 3em)',

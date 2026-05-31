@@ -45,7 +45,7 @@ export default function Marquee({items,direction='up',className=''}) {
 
   return (
     <div
-      className={` hfull bg-green-700 max-h-[300px] flex flex-col gap-2 ${className}`}
+      className={` hfull max-h-[300px] flex flex-col gap-2 ${className}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
