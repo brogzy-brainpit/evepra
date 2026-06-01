@@ -9,6 +9,8 @@ import Heading2 from '@/typography/Heading2';
 import SlideUpElement from '@/effects/SlideUpElement';
 import LandingEffect from '@/effects/LandingEffect';
 import { useHeaderColor } from '@/providers/ColorProvider';
+import Socials from './Socials';
+import Section from '@/layout/Section';
 
 function Landing({preLoaderOut}) {
   const { setActiveSection } = useHeaderColor();
@@ -96,30 +98,26 @@ function Landing({preLoaderOut}) {
             <source src="/videos/hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-      <div className=' absolute z-10 top-0 left-0 bg-neutral-800/60 h-full w-full inset-0'/>
+      <div className=' absolute z-10 top-0 left-0 bg-neutral-800/50 h-full w-full inset-0'/>
 <div className=' lg:col-start-3 z-10 col-span-full lg:col-span-8 relative h-full w-full flex items-end justify-center pb-[4em] bgslate-500'>
-  <motion.h2 className='text-white max-w-[10em] break-word text-heading2 leading-[1] tracking-[-0.03em] capitalize owercase text-center justify-center font-custom font-black ' initial='initial' exit='exit' animate={preLoaderOut?'animate':'initial'} variants={parent} >
+  <motion.h2 className='text-white text-cursor max-w-[10em] break-word text-heading2 leading-[1] tracking-[-0.03em] capitalize owercase text-center justify-center font-custom font-black ' initial='initial' exit='exit' animate={preLoaderOut?'animate':'initial'} variants={parent} >
  
-    <motion.span variants={child} className='mr-[0.2em] inline-block'>we</motion.span>
+    <motion.span variants={child} className='text-cursor mr-[0.2em] inline-block'>we</motion.span>
     <motion.span variants={child} className='relative mr-[0.2em] inline-block'>
       <div className='cursor-pointer absolute top-0 translate-y-[-45%] translate-x-[45%]'>
-        <ScaleUpContent delay={3} damping={5} >
 <Magnetic >
-
         <img initial={{x:80,scale:0}} animate={{x:0,scale:1}} transition={{duration:0.6,ease:'easeOut'}}   src='/assets/bucket.svg' className='w-[40px] h-[40px] lg:size-[1.4em]'/>
 </Magnetic>
-        </ScaleUpContent>
       </div>
+
       bring</motion.span>
     
     <motion.span variants={child} className='mr-[0.2em] relative inline-block font-custom2 font-normal leading-[0.5] italic text-regular loratest'>
         <div className='cursor-pointer absolute top-0 left-0 translate-y-[-65%] translate-x-[105%]'>
-        <ScaleUpContent delay={4} damping={5} >
 <Magnetic >
 
         <img initial={{x:80,scale:0}} animate={{x:0,scale:1}} transition={{duration:0.6,ease:'easeOut'}}   src='/assets/camera.svg' className='w-[40px] h-[40px] lg:size-[1.2em]'/>
 </Magnetic>
-        </ScaleUpContent>
       </div>
       showroom</motion.span>
     <motion.span variants={child} className='mr-[0.2em] inline-block'>quality</motion.span>
@@ -138,6 +136,11 @@ function Landing({preLoaderOut}) {
 
   </motion.h2>
 </div>
+   <div className='absolute z-header bottom-[1em]  left-0 h-ful w-full inset-'>
+      <Section padding={false} className={'flex lg:justify-start justify-center items-center  px-5 w-fi'}>
+      <Socials/>
+      </Section>
+      </div>
   </GridColumn>
 
 {/* </div> */}

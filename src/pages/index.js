@@ -36,13 +36,12 @@ function PageContent() {
 const activeheaderColor= menubg[activeSection] || "#fff";
 const menutextt = menutext[activeSection] || "#2D7864";
 
-   const [isLoading,setIsLoading]=useState(true)
    const [preLoaderOut,setPreLoaderOut]=useState(false)
 
   useEffect(()=>{
 
    const timer=  setTimeout(() => {
-    setIsLoading(false)
+    setPreLoaderOut(true)
     document.body.style.cursor="default"
     window.scrollTo({top:0})
     }, 2600);
@@ -51,9 +50,6 @@ const menutextt = menutext[activeSection] || "#2D7864";
   return (
     <SmoothScroll>
 
-    <AnimatePresence initial={false} mode="wait" onExitComplete={()=>{setPreLoaderOut(true)}}>
-    {isLoading &&  <Preloader key={'preloader'}/>}
-    </AnimatePresence>
       <Header preLoaderOut={preLoaderOut}  menutextt={menutextt} activeColor={activeheaderColor} />
      
       <ColoredComponent section="default"  >
@@ -62,10 +58,10 @@ const menutextt = menutext[activeSection] || "#2D7864";
 
      <HorizontalTextWavy/>
 
-     <ColoredComponent section="Section2"  >
+     <ColoredComponent section="Section1"  >
          <Section2 />
      </ColoredComponent>
-     <ColoredComponent section="Section1"  >
+     <ColoredComponent section="Section2"  >
           <Section3 />
      </ColoredComponent>
       {/* <ColoredComponent section="default"   >

@@ -4,6 +4,26 @@
 [data-scroll-container] {
   overflow-y: auto !important; 
 } */
+ 
+svg:not(:root) {
+    overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+    .transition-scribble {
+        width: 140%;
+        left: -22%;
+    }
+}
+
+.transition-scribble {
+    width: 120%;
+    height: 120%;
+    display: block;
+    position: absolute;
+    top: -5.5%;
+    left: -12%;
+}
+
  .perspective{
   perspective: 130px;
   perspective-origin: bottom;
@@ -47,11 +67,11 @@ html {
 }
 
 .theme-light {
-  --brand-primary: rgb(47, 112, 193);
-  --brand-secondary: rgb(116, 97, 195);
-  --brand-alternative: rgb(19, 120, 134);
-  --background-site: rgb(249, 249, 249);
-  --background-code: rgb(244, 244, 244);
+  --brand-primary: #2f70c1;
+  --brand-secondary: #7461c3;
+  --brand-alternative: #137886;
+  --background-site: #f9f9f9;
+  --background-code: #f4f4f4;
   --text-body: rgb(54, 49, 61);
   --text-comment: rgb(99, 94, 105);
   --text-high-contrast: rgb(49, 49, 49);
@@ -60,7 +80,7 @@ html {
   --detail-high-contrast: rgb(192, 192, 192);
   --detail-medium-contrast: rgb(234, 234, 234);
   --detail-low-contrast: rgb(240, 240, 242);
-  --admonition-note: rgb(46, 109, 188);
+  --admonition-note: #2e6dbc;
   --admonition-warning: rgb(255, 196, 9);
   --admonition-danger: rgb(220, 38, 38);
   --brand-primary-rgb-value: 47, 112, 193;
@@ -84,7 +104,7 @@ html {
 body, body * {
   cursor: url(https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb10e12e8d4c16e38e5_cursor-default.svg) 2 0, auto;
 }
-h1,h2, p span *{
+h1,h2, p, span, *{
       cursor: url(https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb09ef00eb464b45496_cursor-text.svg) 9 19, text;
 }
 

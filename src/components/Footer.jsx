@@ -1,12 +1,13 @@
 import SlideUpText from '@/effects/SlideUpText'
 import React from 'react'
-import CustomBtn from './CustomBtn'
 import CustomArrow from './CustomArrow'
 import { Facebook, FacebookIcon, Instagram, Linkedin } from 'lucide-react'
 import { motion } from 'framer-motion'
 import SlideUpElement from '@/effects/SlideUpElement'
 import Display from '@/typography/Display'
 import StaggerTextHover from '@/effects/StaggerTextHover'
+import Magnetic from '@/common/Magnetic'
+import Socials from './Socials'
 
 function footer() {
   const texts=[
@@ -89,20 +90,9 @@ function footer() {
     </div>
   </div>
 
-  <div className=" absolut bottom-0 left-0 bgbrand-accent py-4 md:py-[30px] flex gap-2  w-full ">
+  <div className="relative py-4 md:py-[30px] flex gap-2  w-full ">
   {/* Left side - stacked items */}
-       <div className={`w-full  items-start gap-2 flex`}>
-         
-         <p  className=' text-white font-body  text-para  leading-para uppercase'>
-          <img src='/assets/insta.svg' className='w-6 h-6 lg:w-8 lg:h-8 '/>
-          </p>
-           <p  className=' text-white font-body  text-para  leading-para uppercase'>
-          <img src='/assets/tiktok.svg' className='w-6 h-6 lg:w-8 lg:h-8 '/>
-          </p>
-           <p  className=' text-white font-body  text-para  leading-para uppercase'>
-          <img src='/assets/whatsapp.svg' className='w-6 h-6 lg:w-8 lg:h-8 '/>
-          </p>
-          </div>
+      <Socials/>
             <div className={`w-full items-center justify-end flex`}>
          
          <p  className=' text-white font-custom  text-para  capitalize'>code by memet </p>

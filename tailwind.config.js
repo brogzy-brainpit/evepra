@@ -28,8 +28,8 @@ module.exports = {
         'button': 'clamp(14px, 3.5vw, 18px)',
         'para': 'clamp(1em, 1.2vw + 0.2em, 2em)',
         'heading1': 'clamp(3em, 10vw, 12em)',
-        'heading2': 'clamp(2.5em, 5vw + 0.5em, 6em)',
-        'heading3': 'clamp(2em, 2.5vw + 0.5em, 3em)',
+        'heading2': 'clamp(2.2em, 5vw + 0.5em, 6em)',
+        'heading3': 'clamp(1.6em, 2.5vw + 0.5em, 3em)',
         'display': 'clamp(6em, 20vw + 1vw, 40em)',
         'footer': 'clamp(40px, 9vw, 80px)',
       },
@@ -40,9 +40,9 @@ module.exports = {
       },
       colors:{
           'brand-text':"#1c2218",
-        'brand-white':"#f6fcfd",
+        'brand-white':"#f9f9f9",
         'brand-secondary':"#FF0033", //blue best
-        'brand-accent':"#614d70", //accent for links, hover state 
+        'brand-accent':"#137886", //accent for links, hover state 
         'brand-black':"#101718",
         'brand-text':"#1c2218",
       },
