@@ -20,7 +20,7 @@ function footer() {
     }
   ]
   return (
-    <div className='bg-brand-secondary w-full relative py-4  flex gap-2 flex-col '>
+    <div className='bg-brand-secondary w-full h-[90svh] relative py-4  flex gap-2 flex-col '>
 
       <section className=' relative mt-4 w-full h-full gap-6 container-section container mx-auto'>
 

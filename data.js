@@ -1,5 +1,5 @@
-const secondaryColor= '#FF0033'
-const accentColor= "#137886"
+const secondaryColor= '#E9254D'
+const accentColor= "#154138"
 const whiteColor= "#fff"
 const blackColor= "#101718"
 

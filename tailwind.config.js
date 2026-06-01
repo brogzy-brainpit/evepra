@@ -40,9 +40,9 @@ module.exports = {
       },
       colors:{
           'brand-text':"#1c2218",
-        'brand-white':"#f9f9f9",
-        'brand-secondary':"#FF0033", //blue best
-        'brand-accent':"#137886", //accent for links, hover state 
+        'brand-white':"#f5fbe7",
+        'brand-secondary':"#E9254D", //blue best
+        'brand-accent':"#154138", //accent for links, hover state 
         'brand-black':"#101718",
         'brand-text':"#1c2218",
       },

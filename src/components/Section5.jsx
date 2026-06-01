@@ -83,7 +83,7 @@ function Section5
   },
 ];
   return (
-    <div className=' text-white min-h-screen flex items-center overflow-clip'>
+    <div className=' bg-brand-white min-h-screen flex items-center overflow-clip'>
       
       <section className='relative py-20 container mx-auto overflo-x-hidden bgpurple-400 '>
        <Heading2 className='mb-32 !text-black font-custom'>

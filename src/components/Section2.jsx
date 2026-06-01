@@ -40,7 +40,7 @@ function Section2() {
     },
   ]
   return (
-    <section  className="bg-pink400 py-20 ">
+    <section  className="bg-pink400 py-20 bg-brand-white ">
 {/* <p  className='text-heading2 text-balance text-black'>
       {inView?'in-view':'not-inview'}
 

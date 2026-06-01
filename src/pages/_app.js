@@ -147,6 +147,7 @@ const [pageName,setPageName]= useState(router.pathname)
        </div>
         <Component {...pageProps} />
         <Footer />
+        
       </div>
     </AnimatePresence>
   );

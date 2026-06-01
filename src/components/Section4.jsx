@@ -12,7 +12,7 @@ import { useMediaQuery } from 'react-responsive';
 function Section4(){
    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
   return (
-    <div   className="min-h-screen h-screen w-full bgpurple-400">
+    <div   className="min-h-screen h-screen bg-brand-white w-full">
     <Section container={false} padding={false} className={'h-full w-full  pt-10 pb-5 lg:py-10'}>
 <GridColumn className={'h-full w-full bgpink-900'}>
   <div className='p-5 py-20 lg:col-span-7 col-span-full bgpink-400  relative'>
