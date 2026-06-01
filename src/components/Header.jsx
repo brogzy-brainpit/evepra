@@ -12,6 +12,7 @@ import ScaleUpContent from "@/effects/ScaleUpContent";
 import { MenuIcon } from "lucide-react";
 import clsx from "clsx";
 import { useMediaQuery } from "react-responsive";
+import Socials from "./Socials";
 
 function Header({activeColor,menutextt,preLoaderOut}) {
 
@@ -110,9 +111,10 @@ const rotation = useSpring(smoothes, {
   const [burgerMenu, setBurgerMenu] = useState(false);
 
   const Links = [
-    { title: "our work", url: "about" },
-    { title: "culture", url: "contact" },
+    { title: "About us", url: "about" },
+    { title: "Gallery", url: "service" },
     { title: "services", url: "services" },
+    { title: "contact us", url: "contact" },
   ];
 
   return (
@@ -160,7 +162,7 @@ const rotation = useSpring(smoothes, {
 <div className="flex-1 flex justify-end items-center relative z-20">
 
             <div className="relative bg-blue500 ">
-              <motion.div variants={menu} animate={burgerMenu?'opened':'closed'} exit="closed" initial="closed" className="z-10 absolute overflow-clip    rounded-[1em] bg-brand-secondaryy box-border ">
+              <motion.div variants={menu} animate={burgerMenu?'opened':'closed'} exit="closed" initial="closed" className="z-10 absolute overflow-clip    rounded-[1em] bg-brand-secondary box-border ">
      <AnimatePresence>
         {burgerMenu &&  <div className="h-full">
         <motion.div variants={burgerLinksParent} initial={'initial'} animate={'enter'}  exit={'exit'} className= "flex-[2] bgpurple-700 flex flex-col gap-2 py-6 pt-[5em] pl-[1.3em] pr-[0.8em] pb-[2em]  ">
@@ -168,25 +170,22 @@ const rotation = useSpring(smoothes, {
                        return (
                         <motion.div variants={burgerLinks} className="perspective" >
 
-                          <Link className="text-para text-white font-custom2 italic font-black capitalize cursor-pointer" href={url}>{title}</Link>
+                          <Link className="text-heading3 text-white font-custom italic font-black capitalize cursor-pointer" href={url}>{title}</Link>
                         </motion.div>
                       )
                      })}
-                     <motion.div variants={burgerLinks} className="perspective" >
+                     {/* <motion.div variants={burgerLinks} className="perspective" >
+                          <Link className="text-para text-white font-custom2 italic font-black capitalize cursor-pointer" href={"/"}>others</Link>
+                        </motion.div> */}
+                     {/* <motion.div variants={burgerLinks} className="perspective" >
 
                           <Link className="text-para text-white font-custom2 italic font-black capitalize cursor-pointer" href={"/"}>projects</Link>
-                        </motion.div>
-                         <motion.div variants={burgerLinks} className="perspective" >
-
-                          <Link className="text-para text-white font-custom2 italic font-black capitalize cursor-pointer" href={"/"}>others</Link>
-                        </motion.div>
-
+                        </motion.div> */}
          </motion.div>
          <div className="flex flex-[1] font-custom text-xs text-white  justify-between bgpink-500 items-center  pt-[1em] pl-[1.3em] pr-[0.8em] ">
-          <div><a>facebook</a></div>
-          <div><a>instagram</a></div>
-          <div><a>linkedIn</a></div>
+          <Socials/>
          </div>
+
         </div>
          }
      </AnimatePresence>
