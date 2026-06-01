@@ -15,11 +15,12 @@ function about() {
     },[])
   return (
        <div className='min-h-svh bg-brand-white relative flex items-center justify-center'>
-<div className="flex items-center justify-center absolute top-0 left-0 w-full h-screen bg-purple-500 z-10">
-      <div className="flex items-center bg-purple-500 justify-center">
+<div className="flex items-center justify-center absolute top-0 left-0 w-full h-screen  z-10">
+      <div className="flex items-center  justify-center">
            <TextLanding preLoaderOut={preLoaderOut}/>
       </div>
-      <img src='/assets/brand/01.jpg' className='absolute bottom-0 '/>
+      <img src='/assets/brand/01.jpg' className='absolute -rotate-12 top-0 object-cover right-[10%] translate-x-[-50%] h-[20em] aspect-[5/7]'/>
+      <img src='/assets/brand/01.jpg' className='absolute -rotate-12 bottom-0 object-cover left-[10%] translate-x-[-50%] h-[20em] aspect-[5/7]'/>
 
 </div>
     </div>
