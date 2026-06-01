@@ -57,7 +57,7 @@ function Section5
   {
     title: 'Exterior Detailing',
     background: '#F4683B',
-    color: 'black',
+     color: 'white',
     img: '/truus/hands.svg',
     y: 0,
     left: -12,
