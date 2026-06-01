@@ -19,8 +19,8 @@ function about() {
       <div className="flex items-center  justify-center">
            <TextLanding preLoaderOut={preLoaderOut}/>
       </div>
-      <img src='/assets/brand/01.jpg' className='absolute -rotate-12 top-0 object-cover right-[10%] translate-x-[-50%] h-[20em] aspect-[5/7]'/>
-      <img src='/assets/brand/01.jpg' className='absolute -rotate-12 bottom-0 object-cover left-[10%] translate-x-[-50%] h-[20em] aspect-[5/7]'/>
+      <img src='/assets/brand/03.jpg' className='absolute -rotate-12 top-0 object-cover right-[4%] translate-x-[-30%] h-[24em] aspect-[5/7]'/>
+      <img src='/assets/brand/01.jpg' className='absolute -rotate-12 bottom-0 object-cover left-[10%] translate-x-[-50%] h-[24em] aspect-[5/7]'/>
 
 </div>
     </div>
