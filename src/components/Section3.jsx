@@ -7,7 +7,7 @@ import { useHeaderColor } from '@/providers/ColorProvider';
 
 function Section3() {
   return (
-    <div className='min-h-svh bg-black py-20'>
+    <div className='min-h-svh bg-brand-accent py-20'>
 <SwipeableCards/>
     <div className='relative flex justify-center items-center'>
    <div className='max-w-[40em] lg:max-w-[50em] relative'>

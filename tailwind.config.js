@@ -29,7 +29,7 @@ module.exports = {
         'para': 'clamp(1em, 1.2vw + 0.2em, 2em)',
         'heading1': 'clamp(3em, 10vw, 12em)',
         'heading2': 'clamp(2.2em, 5vw + 0.5em, 6em)',
-        'heading3': 'clamp(1.6em, 2.5vw + 0.5em, 3em)',
+        'heading3': 'clamp(2.16em, 2.5vw + 0.5em, 3em)',
         'display': 'clamp(6em, 20vw + 1vw, 40em)',
         'footer': 'clamp(40px, 9vw, 80px)',
       },
@@ -41,7 +41,7 @@ module.exports = {
       colors:{
           'brand-text':"#1c2218",
         'brand-white':"#f5fbe7",
-        'brand-secondary':"#E9254D", //blue best
+        'brand-secondary':"#A80D2C", //blue best
         'brand-accent':"#154138", //accent for links, hover state 
         'brand-black':"#101718",
         'brand-text':"#1c2218",

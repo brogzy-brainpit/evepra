@@ -117,11 +117,11 @@ function Section5
 >
   <img
     src={card.img}
-    className="w-[60px] md:w-[100px] lg:w-[130px] absolute top-0 right-0 -translate-x-[20%] -translate-y-1/2"
+    className="w-[8em] md:w-[100px] lg:w-[130px] absolute top-0 right-0 -translate-x-[20%] -translate-y-1/2"
   />
 
   <div className="w-full flex flex-col gap-2">
-    <Heading3 style={{ color: card.color }} className="!text-left font-custom tracking-tight">
+    <Heading3 style={{ color: card.color }} className="!text-left w-[70%] font-custom ">
       {card.title}
     </Heading3>
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 250 6">
@@ -140,8 +140,8 @@ function Section5
     {card.offers.map((offer, j) => (
       <li
         key={j}
-        style={{ color: card.color }}
-        className="font-body text-para flex items-center justify-start"
+        
+        className="font-body text-para text-brand-white flex items-center justify-start"
       >
         <span className="mr-2 w-5 h-5">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 113 113" fill="none">

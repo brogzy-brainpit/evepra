@@ -46,28 +46,36 @@ function Section4(){
 
   <div className=' bg-red-6 col-span-full lg:col-span-5 bgslate-400 max-hfull w-full relative'>
    <div className='mask-gradient overflow-hidden w-full h-full hidden lg:flex justify-center gap-4 '>
-   <Marquee direction='down' items={[
-   { type: "image", src: "/assets/cars/bmw.svg",bg:'orange' },
-   { type: "image", src: "/assets/cars/mercedez.svg",bg:'#F4683B' },
-   { type: "image", src: "/assets/cars/aston.svg",bg:'#82A0FF' },
- ]} />
- <Marquee direction='up' items={[
-     { type: "image", src: "/assets/cars/ferrari.svg",bg:'#4968EF' },
+  <Marquee direction='down' items={[
+   { type: "image", src: "/assets/cars/ferrari.svg",bg:'#4968EF' },
     { type: "image", src: "/assets/cars/tesla.svg",bg:'grey' },
+    { type: "image", src: "/assets/cars/lambo.svg",bg:'#D48764' },
     { type: "image", src: "/assets/cars/jeep.svg",bg:'#A33D62' },
- ]} />
+    { type: "image", src: "/assets/cars/mclaren.svg",bg:'#326678' },
+  ]} />
+    <Marquee direction='up' items={[
+    { type: "image", src: "/assets/cars/bmw.svg",bg:'orange' },
+   { type: "image", src: "/assets/cars/mercedez.svg",bg:'#F4683B' },
+   { type: "image", src: "/assets/cars/nissan.svg",bg:'#82A0FF' },
+   { type: "image", src: "/assets/cars/aston.svg",bg:'#3D802B' },
+   { type: "image", src: "/assets/cars/porsche.svg",bg:'#933281' },
+  ]} />
    </div>
 
    <div className='mask-gradient overflow-hidden w-full h-ful lg:hidden flex justify-between flex-col gap-4 '>
     <MarqueeX direction='left' items={[
    { type: "image", src: "/assets/cars/ferrari.svg",bg:'#4968EF' },
     { type: "image", src: "/assets/cars/tesla.svg",bg:'grey' },
+    { type: "image", src: "/assets/cars/lambo.svg",bg:'#D48764' },
     { type: "image", src: "/assets/cars/jeep.svg",bg:'#A33D62' },
+    { type: "image", src: "/assets/cars/mclaren.svg",bg:'#326678' },
   ]} />
     <MarqueeX direction='right' items={[
     { type: "image", src: "/assets/cars/bmw.svg",bg:'orange' },
    { type: "image", src: "/assets/cars/mercedez.svg",bg:'#F4683B' },
-   { type: "image", src: "/assets/cars/aston.svg",bg:'#82A0FF' },
+   { type: "image", src: "/assets/cars/nissan.svg",bg:'#82A0FF' },
+   { type: "image", src: "/assets/cars/aston.svg",bg:'#3D802B' },
+   { type: "image", src: "/assets/cars/porsche.svg",bg:'#933281' },
   ]} />
 
    </div>
