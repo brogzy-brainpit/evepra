@@ -13,7 +13,7 @@ function Section5
  const cards = [
   {
     title: 'Ceramic Coating',
-    img: '/truus/camera.svg',
+    img: '/assets/camera.svg',
     background: '#10b981',
     color: 'white',
     left: 10,
@@ -27,7 +27,7 @@ function Section5
   },
   {
     title: 'Paint Correction',
-    img: '/truus/phone.svg',
+    img: '/assets/smile.svg',
     background: 'rgb(46, 109, 188)',
     color: 'white',
     left: -10,
@@ -41,7 +41,7 @@ function Section5
   },
   {
     title: 'Interior Detailing',
-    img: '/truus/love.svg',
+    img: '/assets/eyes.svg',
     background: '#9333ea',
     color: 'white',
     left: 12,
@@ -58,7 +58,7 @@ function Section5
     title: 'Exterior Detailing',
     background: '#F4683B',
      color: 'white',
-    img: '/truus/hands.svg',
+    img: '/assets/time.svg',
     y: 0,
     left: -12,
     offers: [
@@ -72,7 +72,7 @@ function Section5
     left: 14,
     y: 30,
     color: 'white',
-    img: '/truus/watch.svg',
+    img: '/assets/hands.svg',
     background: '#fa12bc',
     offers: [
       'Safe engine cleaning',
@@ -108,7 +108,7 @@ function Section5
           return (
        <InteractiveCard
   key={i}
-  className={`${i !== 0 ? "lg:-ml-12" : ""} sticky top-[20%] shadow-lg flex flex-col justify-center text-white w-[13em] h-[17em] mdw-[260px] mdh-[360px] lg:w-[34em] lg:h-[28em] px-4 py-6 rounded-xl`}
+  className={`${i !== 0 ? "lg:-ml-12" : ""} sticky top-[20%] shadow-lg flex flex-col justify-center text-white w-[80vw] h-[55vh] mdw-[260px] mdh-[360px] lg:w-[34em] lg:h-[28em] px-4 py-6 rounded-xl`}
   style={{
     rotate: card.left,
     backgroundColor: card.background,
@@ -165,7 +165,7 @@ function Section5
        <div className="flex my-[6em] items-center justify-center">
 
 <CustomBtn>
-  <Link href={'/services'} className='flex items-center gap-2 '>
+  <Link scroll={false} href={'/services'} className='flex items-center gap-2 '>
   other services
   </Link>
 </CustomBtn>
