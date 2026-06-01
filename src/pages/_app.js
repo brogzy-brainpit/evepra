@@ -46,6 +46,7 @@ const [pageName,setPageName]= useState(router.pathname)
     '/':'welcome',
     '/about':'about us',
     '/contact':'contact',
+    '/services':'services',
     '/faqs':'FAQS',
     '/gallery':'Gallery [portfolio]',
     '/blog':'blog',
@@ -57,9 +58,9 @@ const [pageName,setPageName]= useState(router.pathname)
   useEffect(() => {
     setPreLoaderOut(true)
 
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
+    // if ("scrollRestoration" in window.history) {
+    //   window.history.scrollRestoration = "manual";
+    // }
     const handleRouteChange=(url)=>{
       setPageName(url)
     }

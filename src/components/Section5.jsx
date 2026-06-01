@@ -3,53 +3,85 @@ import { motion, useTransform, useScroll, useSpring, useInView} from "framer-mot
 import Heading2 from '@/typography/Heading2';
 import InteractiveCard from './InteractiveCards';
 import Heading3 from '@/typography/Heading3';
+import CustomArrow from './CustomArrow';
+import CustomBtn from './CustomBtn';
+import Link from 'next/link';
 
 
 function Section5
 () {
-  const cards=[
-    {title:'card 1',
-      img:'/truus/camera.svg',
-      background:'#10b981',
-      color:"white",
-      left:10,
-      y:0,
-      offers:['offer card 1', 'offer card 2','offer card 3','offer card 4',]
-    },
-    {title:'card 2',
-      img:'/truus/phone.svg',
-      background:'rgb(46, 109, 188)',
-      color:"white",
-      left:-10,
-      y:30,
-
-      offers:['offer card 1', 'offer card 2','offer card 3','offer card 4']
-    },
-    {title:'card 3',
-      img:'/truus/love.svg',
-      background:'#9333ea',
-      color:"white",
-      left:12,
-      y:-10,
-      offers:['offer card 1', 'offer card 2','offer card 3','offer card 4','offer card 5',]
-    },
-    {title:'card 4',
-      background:'rgb(255, 196, 9)',
-      color:"black",
-      img:'/truus/hands.svg',
-      y:0,
-      left:-12,
-      offers:['offer card 1', 'offer card 2','offer card 3',]
-    },
-    {title:'card 5',
-      left:14,
-      y:30,
-      color:"white",
-      img:'/truus/watch.svg',
-      background:'#fa12bc',
-      offers:['offer card 1', 'offer card 2','offer card 3','offer card 4',,]
-    },
-  ]
+ const cards = [
+  {
+    title: 'Ceramic Coating',
+    img: '/truus/camera.svg',
+    background: '#10b981',
+    color: 'white',
+    left: 10,
+    y: 0,
+    offers: [
+      'Long-lasting paint protection',
+      'Hydrophobic water beading',
+      'Enhanced gloss finish',
+      'UV damage resistance',
+    ],
+  },
+  {
+    title: 'Paint Correction',
+    img: '/truus/phone.svg',
+    background: 'rgb(46, 109, 188)',
+    color: 'white',
+    left: -10,
+    y: 30,
+    offers: [
+      'Swirl mark removal',
+      'Light scratch reduction',
+      'Restored paint clarity',
+      'Mirror-like shine',
+    ],
+  },
+  {
+    title: 'Interior Detailing',
+    img: '/truus/love.svg',
+    background: '#9333ea',
+    color: 'white',
+    left: 12,
+    y: -10,
+    offers: [
+      'Deep upholstery cleaning',
+      'Dashboard surface restoration',
+      'Odor elimination treatment',
+      'Carpet stain removal',
+      'Premium interior finish',
+    ],
+  },
+  {
+    title: 'Exterior Detailing',
+    background: '#F4683B',
+    color: 'black',
+    img: '/truus/hands.svg',
+    y: 0,
+    left: -12,
+    offers: [
+      'Thorough hand wash',
+      'Clay bar treatment',
+      'Protective wax coating',
+    ],
+  },
+  {
+    title: 'Engine Bay Detailing',
+    left: 14,
+    y: 30,
+    color: 'white',
+    img: '/truus/watch.svg',
+    background: '#fa12bc',
+    offers: [
+      'Safe engine cleaning',
+      'Degreasing treatment applied',
+      'Plastic trim dressing',
+      'Fresh detailed appearance',
+    ],
+  },
+];
   return (
     <div className=' text-white min-h-screen flex items-center overflow-clip'>
       
@@ -90,7 +122,7 @@ function Section5
 
   <div className="w-full flex flex-col gap-2">
     <Heading3 style={{ color: card.color }} className="!text-left font-custom tracking-tight">
-      card heading
+      {card.title}
     </Heading3>
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 250 6">
       <path
@@ -129,8 +161,15 @@ function Section5
           )
         })}
        </div>
-       
 
+       <div className="flex my-[6em] items-center justify-center">
+
+<CustomBtn>
+  <Link href={'/services'} className='flex items-center gap-2 '>
+  other services
+  </Link>
+</CustomBtn>
+       </div>
       </section>
     </div>
   )

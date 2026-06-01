@@ -112,7 +112,7 @@ const rotation = useSpring(smoothes, {
   const Links = [
     { title: "our work", url: "about" },
     { title: "culture", url: "contact" },
-    { title: "methods", url: "about" },
+    { title: "services", url: "services" },
   ];
 
   return (

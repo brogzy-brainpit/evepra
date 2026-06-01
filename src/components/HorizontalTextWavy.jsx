@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import useWindow from "./useWindow";
 import Section from "@/layout/Section";
-import CustomBtn from "./CustomButton";
+import CustomBtn from "./CustomBtn";
 import { useHeaderColor } from "@/providers/ColorProvider";
 
 export const random = (min=-40, max=200) => Math.random() * (max - min) + min;
@@ -196,8 +196,10 @@ const opacity =useSpring(useTransform(scrollYProgress, [start,end], [0,1]),{ sti
               {paragraph}
             </motion.p>
             <CustomBtn>
-              click me
-              </CustomBtn>
+              <span className='flex items-center gap-2 '>
+                book a call
+              </span>
+            </CustomBtn>
       </motion.div>
 
           </div>
