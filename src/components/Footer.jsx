@@ -28,12 +28,12 @@ function footer() {
   <div className="flex gap-2 breaker my-6 ">
   {/* Right side - single 50% item */}
   <div className=" breaker-chil  px-4  items-start justify-end md:justify-start flex   w-[68%]  ">
-         <h3 duration={0.5} delay={0.04} className=' text-white links-cursor font-custom font-bold text-[20px] md:text-[30px] leading-[40px] uppercase' >
+         <h3 duration={0.5} delay={0.04} className=' text-white links-cursor font-custom font-bold text-[20px] md:text-[30px] leading-[40px] ' >
           hello@reserve.com
           </h3>  
           </div>
             <div className=" breaker-child px-4  items-start justify-end flex w-[68%]  ">
-         <h3 duration={0.5} delay={0.04} className='links-cursor text-white  font-custom font-bold text-[20px] md:text-[30px] leading-[40px] uppercase'>
+         <h3 duration={0.5} delay={0.04} className='links-cursor text-white  font-custom font-bold text-[20px] md:text-[30px] leading-[40px] '>
           +(234)9063260237
           </h3>  
           </div>
