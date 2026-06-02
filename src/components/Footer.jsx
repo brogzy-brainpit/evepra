@@ -27,11 +27,15 @@ function footer() {
 
   <div className="flex gap-2 breaker my-6 ">
   {/* Right side - single 50% item */}
-  <div className="breaker-chil  px-4  items-start justify-end md:justify-start flex   w-[68%]  ">
-         <SlideUpText duration={0.5} delay={0.04} className=' text-white font-custom font-bold text-[20px] md:text-[30px] leading-[40px] uppercase' text={'hello@reserve.com'}/>  
+  <div className=" breaker-chil  px-4  items-start justify-end md:justify-start flex   w-[68%]  ">
+         <h3 duration={0.5} delay={0.04} className=' text-white links-cursor font-custom font-bold text-[20px] md:text-[30px] leading-[40px] uppercase' >
+          hello@reserve.com
+          </h3>  
           </div>
-            <div className="breaker-child px-4  items-start justify-end flex w-[68%]  ">
-         <SlideUpText duration={0.5} delay={0.04} className=' text-white font-custom font-bold text-[20px] md:text-[30px] leading-[40px] uppercase' text={'+(234)9063260237'}/>  
+            <div className=" breaker-child px-4  items-start justify-end flex w-[68%]  ">
+         <h3 duration={0.5} delay={0.04} className='links-cursor text-white  font-custom font-bold text-[20px] md:text-[30px] leading-[40px] uppercase'>
+          +(234)9063260237
+          </h3>  
           </div>
           
         
@@ -43,22 +47,22 @@ function footer() {
        {/* <div className={`w-full  items-start gap-2 flex flex-col`}> */}
             <div className={`w-full  -4 rounded-2xl items-end md:items-start justify-between flex gap-[4px] flex-col`}>
          
-         <p  className=' text-white font-body  text-para  leading-para'>general Streen 45-FB</p>
-         <p  className=' text-white font-body  text-para  leading-para'>1017 MT Kaduna</p>
-         <p  className=' text-white font-body  text-para  leading-para'>Nigeria</p>
+         <p  className=' text-white links-cursor font-body  text-para  leading-para'>general Streen 45-FB</p>
+         <p  className=' text-white links-cursor font-body  text-para  leading-para'>1017 MT Kaduna</p>
+         <p  className=' text-white links-cursor font-body  text-para  leading-para'>Nigeria</p>
           </div>
 
           <div className={`w-full  -4 rounded-2xl items-end md:items-center justify-between flex gap-[2px] flex-col  borde border-brand-accent`}>
 
-         <p  className=' text-white circular font-bold text-para  leading-pa3a uppercase'> Let's talk</p>
-         <p  className=' text-white font-body  text-para  leading-para'> email@domain.com</p>
+         <p  className=' text-white links-cursor circular font-bold text-para  leading-pa3a uppercase'> Let's talk</p>
+         <p  className=' text-white links-cursor font-body  text-para  leading-para'> email@domain.com</p>
 
           </div>
             <div className={`w-full items-end justify-between flex gap-[4px] flex-col`}>
          
-         <p  className=' text-white circular font-bold  text-para  leading-p3ra uppercase'>Policies</p>
-         <p  className=' text-white font-body  text-para  leading-para'>Privacy policy</p>
-         <p  className=' text-white font-body  text-para  leading-para'>Terms and conditions
+         <p  className=' text-white links-cursor circular font-bold  text-para  leading-p3ra uppercase'>Policies</p>
+         <p  className=' text-white links-cursor font-body  text-para  leading-para'>Privacy policy</p>
+         <p  className=' text-white links-cursor font-body  text-para  leading-para'>Terms and conditions
          </p>
 
           </div>
@@ -69,8 +73,8 @@ function footer() {
 
 
 <div className='flex flex-col justify-center relative h[200px] lg:h-[300px] overflow-x-clip'>
-   <div className="relative h-ft w-full bgblack text-white p10" >
-   <div className="relative h-ft w-full bgblack text-white p10 [clip-path:inset(0_0_25%_0)]" >
+   <div className="relative h-ft w-full bgblack text-white links-cursor p10" >
+   <div className="relative h-ft w-full bgblack text-white links-cursor p10 [clip-path:inset(0_0_25%_0)]" >
  <StaggerTextHover inView={true} className='w-full'/>
     </div>
     <div className='absolute top-0 bgpurple-400 w-full h-full'>
@@ -96,7 +100,7 @@ function footer() {
       <Socials/>
             <div className={`w-full items-center justify-end flex`}>
          
-         <p  className=' text-white font-custom  text-para  capitalize'>code by <Link href="https://instagram.com/memet_lab" className="links-cursor underline" target="_blank" rel="noopener noreferrer">memet</Link> </p>
+         <p  className=' text-white links-cursor font-custom  text-para  capitalize'>code by <Link href="https://instagram.com/memet_lab" className="links-cursor underline" target="_blank" rel="noopener noreferrer">memet</Link> </p>
 
           </div>
   
