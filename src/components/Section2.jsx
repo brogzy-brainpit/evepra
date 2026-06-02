@@ -56,7 +56,7 @@ function Section2() {
     </Heading2>
     <div className='flex justify-center'>
          <motion.div initial={{scale:0}} whileInView={{scale:1}} transition={{delay:0.8,duration:0.2,type:'spring',damping:10,stiffness:120}} className=' absolute right-[16%] bottom-[28%] lg:right-[7%] lg:bottom-[28%] '>
-        <img   src='/truus/love.svg' className=' w-[50px]  lg:w-[120px] '/>
+        <Image  width={120}  height={120} src='/truus/love.svg' className=' w-[50px]  lg:w-[120px] '/>
         </motion.div>
         <div className='w-[80%] flex justify-center'>
          <svg className='  w-full'  xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 634 28" fill="none" data-scroll-animation-target="draw">

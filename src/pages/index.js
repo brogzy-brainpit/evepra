@@ -67,9 +67,7 @@ const menutextt = menutext[activeSection] || "#2D7864";
      <ColoredComponent section="Section1"  >
    <Section5 />
 </ColoredComponent>
-<ColoredComponent section="Section1"  >
-   <Section4 />
-</ColoredComponent>
+
     </SmoothScroll>
            
     

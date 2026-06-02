@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 const cards = [
   {
@@ -127,11 +128,12 @@ export function SwipeableCards() {
                 if (info.offset.x < -swipeThreshold) handleSwipe("left")
               }}
             >
-              <img
+              <Image
                 src={card.image}
                 alt={card.title}
+                fill
                 draggable={false}
-                className="w-full h-full object-cover pointer-events-none select-none"
+                className="w-full absolute h-full object-cover pointer-events-none select-none"
               />
 
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">

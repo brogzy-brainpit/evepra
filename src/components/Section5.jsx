@@ -6,6 +6,7 @@ import Heading3 from '@/typography/Heading3';
 import CustomArrow from './CustomArrow';
 import CustomBtn from './CustomBtn';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 function Section5
@@ -115,9 +116,12 @@ function Section5
     y: card.y,
   }}
 >
-  <img
-    src={card.img}
-    className="w-[8em] md:w-[100px] lg:w-[130px] absolute top-0 right-0 -translate-x-[20%] -translate-y-1/2"
+  <Image
+  width={500}
+  height={500}
+  src={card.img}
+  
+  className="w-[8em] md:w-[100px] lg:w-[130px] absolute top-0 right-0 -translate-x-[20%] -translate-y-1/2"
   />
 
   <div className="w-full flex flex-col gap-2">
