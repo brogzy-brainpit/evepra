@@ -131,7 +131,7 @@ const rotation = useSpring(smoothes, {
       exit={{y:"-100%"}}
       transition={{duration:0.4,delay:0}}
         className=" bg-red300 shadowlg backdropblur-lg  roundedfull w-full flex items-center justify-between py-2">
-          <Link href={"/"} className="flex-1 z-20 overflow-visible  text-center font-custom text-2xl">
+          <Link href={"/"} className="links-cursor  flex-1 z-20 overflow-visible  text-center font-custom text-2xl">
             {/* <h2 className={"relative circular font-bold text-white text-4xl leading-[1] flex items-end"}>alfred <span className="absolute bottom-1 -right-[10px] ml-[4px] w-[8px] h-[8px] rounded-full bg-white"></span></h2> */}
        <StaggerTextHover preLoaderOut={preLoaderOut} activeColor={activeColor } className="relative w-[7em] " text={["E", "v", "e" ,"p", "r" ,"a",'*']}/>
       
@@ -145,7 +145,7 @@ const rotation = useSpring(smoothes, {
                   style={{
     color: activeColor,
   }}
-                className="cursor-pointer font-body  text-para capitalize"
+                className="links-cursor font-body  text-para capitalize"
                 href={`/${url}`}
               >
             {title}
@@ -170,7 +170,7 @@ const rotation = useSpring(smoothes, {
                        return (
                         <motion.div variants={burgerLinks} className="perspective" >
 
-                          <Link className="text-heading3 text-white font-custom italic font-black capitalize cursor-pointer" href={url}>{title}</Link>
+                          <Link className="text-heading3 links-cursor text-white font-custom italic font-black capitalize cursor-pointer" href={url}>{title}</Link>
                         </motion.div>
                       )
                      })}

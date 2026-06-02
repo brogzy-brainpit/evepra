@@ -9,13 +9,13 @@ function CustomBtn({children,href='#',icon,className=' capitalize '}) {
     
     <div onMouseEnter={()=>{setAktiv(true)}}
     onMouseLeave={()=>{setTimeout(() => {setAktiv(false)}, 200)}}
-     className={`${className} font-body bg-brand-secondar  
+     className={`${className} font-body bg-brand-secondar links-cursor 
      p-  h-[3em] min-w-[8em] max-w-[10em] text-para relative overflow-hidden flex items-center justify-center`}>
     
-   <motion.div transition={{duration:.3,ease:"easeOut"}} animate={{scale:isAktiv?0:1, y:isAktiv?[0,-20,50]:0}} className='rounded-full px-4 bg-brand-secondary text-brand-white h-full w-full flex items-center justify-center'>
+   <motion.div transition={{duration:.3,ease:"easeOut"}} animate={{scale:isAktiv?0:1, y:isAktiv?[0,-20,50]:0}} className='rounded-full links-cursor px-4 bg-brand-secondary text-brand-white h-full w-full flex items-center justify-center'>
     {children}
    </motion.div>
-   <motion.div transition={{duration:.3,ease:"easeOut"}} animate={{scale:isAktiv?1:0, y:isAktiv?"0%":[0,-20,50]}} className='rounded-full px-4 bg-brand-accent text-brand-white h-full w-full flex items-center justify-center absolute '>
+   <motion.div transition={{duration:.3,ease:"easeOut"}} animate={{scale:isAktiv?1:0, y:isAktiv?"0%":[0,-20,50]}} className='rounded-full px-4 links-cursor bg-brand-accent text-brand-white h-full w-full flex items-center justify-center absolute '>
     {children}
    </motion.div>
        </div>

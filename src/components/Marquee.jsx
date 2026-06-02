@@ -63,7 +63,7 @@ export default function Marquee({items,direction='up',className=''}) {
 
               <Image
                 src={item.src}
-                alt=""
+                alt="car logo"
                 width={500}
                 height={500}
                 className="rounded-lg  w-full h-full object-cover object-top"

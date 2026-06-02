@@ -90,13 +90,13 @@ function Section5
        <Heading2 className='mb-32 !text-black font-custom'>
       
    
-    <span className='mr-[0.3em]'>call</span>
+    <span className='mr-[0.3em]'>Call</span>
     <span className='mr-[0.3em]'>us</span>
     <span className='mr-[0.3em]'>if</span>
     <span className='mr-[0.3em]'>you</span>
      <span className=' relative mr-[0.3em]  font-custom2 font-normal italic text-regular'>
       <div className='w-full absolute bottom-0 left-0 translate-y-[100%] translate-x-[0%] mr-[0.3em] inline-block'>
-        <motion.svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 169 10" fill="none" class="draw-btn__svg"><motion.path d="M1 6.5661C56.3941 3.06082 112.187 1.20095 168 0.999878" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path>
+        <motion.svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 169 10" fill="none" className="pointer-events-none draw-btn__svg"><motion.path d="M1 6.5661C56.3941 3.06082 112.187 1.20095 168 0.999878" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path>
         <motion.path initial={{pathLength:0}} whileInView={{pathLength:1}} transition={{duration:0.6,ease:'easeOut'}} d="M32.1313 8.63371C68.2147 6.92799 104.462 6.13378 140.695 6.25107" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path></motion.svg>
       </div>
       need:</span>
@@ -120,7 +120,7 @@ function Section5
   width={500}
   height={500}
   src={card.img}
-  
+
   className="w-[8em] md:w-[100px] lg:w-[130px] absolute top-0 right-0 -translate-x-[20%] -translate-y-1/2"
   />
 
@@ -169,7 +169,7 @@ function Section5
        <div className="flex my-[6em] items-center justify-center">
 
 <CustomBtn>
-  <Link scroll={false} href={'/services'} className='flex items-center gap-2 '>
+  <Link scroll={false} href={'/services'} className='links-cursor flex items-center gap-2 '>
   other services
   </Link>
 </CustomBtn>

@@ -107,6 +107,9 @@ body, body * {
 h1,h2, p, span, *{
       cursor: url(https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb09ef00eb464b45496_cursor-text.svg) 9 19, text;
 }
+.links-cursor{
+      cursor: url(https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef67_cursor-pointer.svg) 9 19, text;
+}
 
   .theme-dark {
   --brand-primary: rgb(138, 180, 248);

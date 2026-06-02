@@ -196,7 +196,7 @@ const opacity =useSpring(useTransform(scrollYProgress, [start,end], [0,1]),{ sti
               {paragraph}
             </motion.p>
             <CustomBtn>
-              <span className='flex items-center gap-2 '>
+              <span className='flex items-center gap-2 links-cursor '>
                 book a call
               </span>
             </CustomBtn>

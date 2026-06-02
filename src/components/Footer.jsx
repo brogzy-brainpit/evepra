@@ -8,6 +8,7 @@ import Display from '@/typography/Display'
 import StaggerTextHover from '@/effects/StaggerTextHover'
 import Magnetic from '@/common/Magnetic'
 import Socials from './Socials'
+import Link from 'next/link'
 
 function footer() {
   const texts=[
@@ -95,7 +96,7 @@ function footer() {
       <Socials/>
             <div className={`w-full items-center justify-end flex`}>
          
-         <p  className=' text-white font-custom  text-para  capitalize'>code by memet </p>
+         <p  className=' text-white font-custom  text-para  capitalize'>code by <Link href="https://instagram.com/memet_lab" className="links-cursor underline" target="_blank" rel="noopener noreferrer">memet</Link> </p>
 
           </div>
   
