@@ -47,12 +47,12 @@ function Section2() {
   </p>    */}
   <div className='overflow-clip containe px5 mx-auto  '>
     <div className='relative flex justify-center items-center'>
-      <div className='max-w-[50em]  lg:max-w-[50em] relative'>
+      <div className='max-w-[50em]  lg:max-w-[58em] relative'>
     <Heading2 className={'!text-balance !text-black col-start-3 col-span-8 '}>
         <span className="">
           </span>
-          An agency built for the future
-        <em className='relative font-custom2 font-light inline-block'>from TV to TikTok</em>
+          Detailing for every drive from
+        <em className='relative font-custom2 font-light inline-block'>classics to supercars</em>
     </Heading2>
     <div className='flex justify-center'>
          <motion.div initial={{scale:0}} whileInView={{scale:1}} transition={{delay:0.8,duration:0.2,type:'spring',damping:10,stiffness:120}} className=' absolute right-[16%] bottom-[28%] lg:right-[7%] lg:bottom-[28%] '>
