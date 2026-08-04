@@ -7,6 +7,7 @@ import CustomArrow from './CustomArrow';
 import CustomBtn from './CustomBtn';
 import Link from 'next/link';
 import Image from 'next/image';
+import CTA from './CTA';
 
 
 function Section5
@@ -89,17 +90,12 @@ function Section5
       <section className='relative py-20 container mx-auto overflo-x-hidden bgpurple-400 '>
        <Heading2 className='mb-32 !text-black font-custom'>
       
-   
-    <span className='mr-[0.3em]'>Call</span>
-    <span className='mr-[0.3em]'>us</span>
-    <span className='mr-[0.3em]'>if</span>
-    <span className='mr-[0.3em]'>you</span>
-     <span className=' relative mr-[0.3em]  font-custom2 font-normal italic text-regular'>
-      <div className='w-full absolute bottom-0 left-0 translate-y-[100%] translate-x-[0%] mr-[0.3em] inline-block'>
-        <motion.svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 169 10" fill="none" className="pointer-events-none draw-btn__svg"><motion.path d="M1 6.5661C56.3941 3.06082 112.187 1.20095 168 0.999878" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path>
-        <motion.path initial={{pathLength:0}} whileInView={{pathLength:1}} transition={{duration:0.6,ease:'easeOut'}} d="M32.1313 8.63371C68.2147 6.92799 104.462 6.13378 140.695 6.25107" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" style=""></motion.path></motion.svg>
-      </div>
-      need:</span>
+    <CTA  href='tel:+971 50 123 4567'
+                 className="text-brand-black mt[2em] text-para "
+               >
+                 call us
+               </CTA>
+    <span className='mr-[0.3em]'>if you need</span>
    
 {/* <TitleLineSvg/> */}
 
