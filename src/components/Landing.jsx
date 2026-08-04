@@ -76,13 +76,9 @@ function Landing({preLoaderOut}) {
  const MotionHeading2= motion(Heading2)
   return (
     <div ref={landing} className='relative h-svh bg-red300 p-0 md:p-2 box-border'>
-      <div className='bg-purple-500 overflow-hidden relative h-full rounded-none md:rounded-2xl [cursor:url("	https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb09ef00eb464b45496_cursor-text.svg")_9_19,text]'>
+      <div className='overflow-hidden relative h-full rounded-none md:rounded-2xl [cursor:url("	https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb09ef00eb464b45496_cursor-text.svg")_9_19,text]'>
 {/* <div className={'bg-red-500 h-full grid grid-cols-6 lg:grid-cols-12 gap-[1.25rem] lg:gap-[2.5rem]'}> */}
-  <GridColumn className={'bg-red-500 h-full'}>
-
-      <div className='z-[1] absolute top-0 left-0 h-full w-full inset-0'>
-  <Image width={600} height={700}  className='z-0 h-full w-full object-cover' src={'/images/service01.png'}/>
-      </div>
+  <GridColumn className={'bg-black h-full'}>
       {/* <iframe
         className="z-[2] absolute top-1/2 left-1/2 min-w-full min-h-full w-[177.77vh] h-[100vh] -translate-x-1/2 -translate-y-1/2"
         src="https://player.vimeo.com/video/1038524436?api=1&background=1&autoplay=1&loop=1&muted=1"
@@ -90,8 +86,7 @@ function Landing({preLoaderOut}) {
         allowFullScreen
       ></iframe> */}
       
-          <LandingVideo preLoaderOut={preLoaderOut} link="/videos/exoticcar.mp4"/>
-      <div className=' absolute z-10 top-0 left-0 bg-neutral-800/50 h-full w-full inset-0'/>
+          <LandingVideo poster={"/images/hero.png"} preLoaderOut={preLoaderOut} link="/videos/exoticcar.mp4"/>
 <div className=' lg:col-start-3 z-10 col-span-full lg:col-span-8 relative h-full w-full flex items-end justify-center pb-[4em] bgslate-500'>
   <motion.h2 className='text-white text-cursor max-w-[10em] break-word text-heading2 leading-[1] tracking-[-0.03em] capitalize owercase text-center justify-center font-custom font-black ' initial='initial' exit='exit' animate={preLoaderOut?'animate':'initial'} variants={parent} >
  

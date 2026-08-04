@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
+import Image from "next/image"
 
-function LandingVideo({ link, preLoaderOut }) {
+function LandingVideo({ link, poster, preLoaderOut }) {
   const videoRef = useRef(null)
-
   useEffect(() => {
     const video = videoRef.current
 
@@ -16,17 +16,31 @@ function LandingVideo({ link, preLoaderOut }) {
   }, [preLoaderOut])
 
   return (
-    <video
-      ref={videoRef}
-      src={link}
-      muted
-      loop
-      playsInline
-      preload="metadata"
-      className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-x z-[2]  min-w-full min-h-full w-[177.77vh] h-[100vh] object-cover"
-    >
-      Your browser does not support the video tag.
-    </video>
+    <>
+      {/* Fallback / Poster Image */}
+      <Image
+        src={poster}
+        alt=""
+        fill
+        priority
+        className={`absolute top-0 left-0 object-cover z-[1] transition-opacity duration-700`}
+      />
+
+      {/* Video */}
+      <video
+        ref={videoRef}
+        src={link}
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] min-w-full min-h-full w-[177.77vh] h-[100vh] object-cover"
+      >
+        Your browser does not support this video tag.
+      </video>
+      <div className=' absolute z-10 top-0 left-0 bg-neutral-800/45 h-full w-full inset-0'/>
+
+    </>
   )
 }
 
