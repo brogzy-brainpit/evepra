@@ -4,6 +4,7 @@ import Heading2 from '@/typography/Heading2'
 import Heading3 from '@/typography/Heading3'
 import { motion, useInView} from "framer-motion";
 import { useHeaderColor } from '@/providers/ColorProvider';
+import CTA from './CTA';
 
 function Section3() {
   return (
@@ -60,7 +61,11 @@ function Section3() {
 </Heading3>
 
     <div className='flex justify-center'>
-       
+       <CTA  href='tel:+971 50 123 4567'
+  className="text-brand-white mt-[2em] text-heading3 "
+>
+  Book an appointment
+</CTA>
       </div>
 
       
