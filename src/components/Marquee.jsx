@@ -57,9 +57,9 @@ export default function Marquee({items,direction='up',className=''}) {
           <div
             key={i}
             ref={(el) => (refs.current[i] = el)}
-            className="lg:h-[200px] lg:w-[200px]  h-[180px] w-[180px] maxw-[95%] bg-red-400"
+            className="lg:h-[200px] lg:w-[200px]   h-[180px] w-[180px] maxw-[95%]"
           >
-            <div style={{backgroundColor:item.bg}} className="p-4 h-full" >
+            <div style={{backgroundColor:item.bg}} className="p-4 h-full rounded-xl" >
 
               <Image
                 src={item.src}

@@ -11,7 +11,7 @@ function Section3() {
     <div className='min-h-svh bg-brand-accent py-20'>
 <SwipeableCards/>
     <div className='relative flex justify-center items-center'>
-   <div className='max-w-[40em] lg:max-w-[50em] relative'>
+   <div className='max-w-[40em] lg:max-w-[54em] relative'>
    <Heading3 className="text-balance justify-center">
   <span>Every finish tells a story of </span>
   <em className="relative inline-block font-custom2 font-light">
@@ -21,7 +21,7 @@ function Section3() {
       width="100%"
       viewBox="0 0 201 86"
       fill="none"
-      className="team__h2-circle-svg absolute top-[52%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+      className="team__h2-circle-svg absolute top-[50%] left-[54%] translate-x-[-50%] translate-y-[-54%]"
     >
       <motion.path
       initial={{pathLength:0}} whileInView={{pathLength:1}} transition={{duration:0.6,ease:'easeOut'}}
@@ -34,9 +34,7 @@ function Section3() {
     </svg>
   </em>
 
-  <span >craft and </span>
-  <span>&nbsp;uncompromising</span>
-
+  <span >&nbsp;craft and uncompromising</span>
   <em className="relative inline-block font-light font-custom2">
     <span className='ml-[0.2em]' >attention</span>
     <svg

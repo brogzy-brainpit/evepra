@@ -64,12 +64,12 @@ export default function MarqueeX({items,direction='left',className=''}) {
           <div
             key={i}
             ref={(el) => (refs.current[i] = el)}
-            className="lg:h-[200px] lg:w-[200px]  h-[130px] w-[180px]  maxw-[95%] bg-red-400"
+            className="lg:h-[200px] lg:w-[200px]  h-[130px] w-[180px]  maxw-[95%]"
           >
             {/* <Heading2>
               brogzy-brainpit-developers
             </Heading2> */}
-            <div style={{backgroundColor:item.bg}} className="p-4 h-full flex items-center justify-center" >
+            <div style={{backgroundColor:item.bg}} className="p-4 h-full rounded-xl flex items-center justify-center" >
 
               <Image
                 src={item.src}
