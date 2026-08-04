@@ -13,10 +13,10 @@ function Section4(){
    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
   return (
     <div   className="min-h-screen h-screen bg-brand-white w-full">
-    <Section container={false} padding={false} className={'h-full w-full  pt-10 pb-5 lg:py-[10em]'}>
+    <Section container={false} padding={false} className={'h-full w-full  pt-10 pb-5 lg:py-10'}>
 <GridColumn className={'h-full w-full bgpink-900'}>
   <div className='p-5 py-20 lg:col-span-7 col-span-full bgpink-400  relative'>
-    <span  className=' hidde block z-[1] lg:w-[50%] w-[20%] absolute bottom-0 left-[14%]  translate-x-[-40%] translate-y-[-120%]  lg:translate-x-[30%] lg:translate-y-[70%]'>
+    <span  className=' hidde block z-[1] lg:w-[50%] w-[20%] absolute bottom-0 left-[14%]  translate-x-[-40%] translate-y-[-120%]  lg:translate-x-[30%] lg:translate-y-[-70%]'>
    <div   className='lg:scale-x-[-1]'>
      <motion.svg className="w-[12em] lg:w-[400px] "  style={{rotate:isTabletOrMobile ? 40 : 150,}} xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 386 127" fill="none"><motion.path whileInView={{pathLength:1}} initial={{pathLength:0}} transition={{duration:1,ease:'easeOut'}} d="M2 123C9 35.9999 84.5 17 124 25.9999C217.764 47.3635 207 115 177.5 123C105.777 142.45 110.737 1.99991 232.5 2C310.5 2.00006 366.5 79 376 118L356.5 105.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ></motion.path><motion.path 
      whileInView={{pathLength:1}}  initial={{pathLength:0}} transition={{duration:1,ease:'easeOut'}} d="M2 123C9 35.9999 84.5 17 124 25.9999C217.764 47.3635 207 115 177.5 123C105.777 142.45 110.737 1.99991 232.5 2C310.5 2.00006 366.5 79 376 118L384 97" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ></motion.path></motion.svg>
