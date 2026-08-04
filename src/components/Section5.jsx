@@ -8,6 +8,7 @@ import CustomBtn from './CustomBtn';
 import Link from 'next/link';
 import Image from 'next/image';
 import CTA from './CTA';
+import Section from '@/layout/Section';
 
 
 function Section5
@@ -87,7 +88,7 @@ function Section5
   return (
     <div className=' bg-brand-white min-h-screen flex items-center overflow-clip'>
       
-      <section className='relative py-20 container mx-auto overflo-x-hidden bgpurple-400 '>
+      <Section className='relative py-0 lg:pt-[10em] lg:pb-[7em]'>
        <Heading2 className='mb-32 !text-black font-custom'>
       
     <CTA  href='tel:+971 50 123 4567'
@@ -174,11 +175,11 @@ function Section5
   </Link>
 </CustomBtn> */}
        </div>
-      </section>
+      </Section>
     </div>
   )
 }
-
+ 
 export default Section5
 
 

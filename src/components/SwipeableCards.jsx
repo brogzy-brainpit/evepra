@@ -8,14 +8,21 @@ const cards = [
   {
     id: 1,
     type: "video",
+    src: "/videos/fordvideo.mp4",
+    title: "Ford Bronco",
+    age: 2026,
+    label: "Engine bay detail | Interior valet",
+  },{
+    id: 2,
+    type: "video",
     src: "/videos/mclarenvideo.mp4",
-    playbackRate: 1.4,
+    playbackRate: 1.,
     title: "McLaren Artura",
     age: 2026,
     label: "Paint enhancement | Ceramic coating",
   },
   {
-    id: 2,
+    id: 3,
     type: "video",
     src: "/videos/bentleyvideo.mp4",
     playbackRate: 1.6,
@@ -24,7 +31,7 @@ const cards = [
     label: "Interior detail | Exterior detail",
   },
   {
-    id: 3,
+    id: 4,
     type: "video",
     src: "/videos/ferrarivideo.mp4",
     playbackRate: 1.4,
@@ -33,21 +40,13 @@ const cards = [
     label: "Paint correction | Gloss enhancement",
   },
   {
-    id: 4,
+    id: 5,
     type: "image",
     src: "/detailing/lambourus.jpg",
     title: "Lamborghini Urus",
     age: 2026,
     label: "Ceramic coating | Wheel detailing",
-  },
-  {
-    id: 5,
-    type: "video",
-    src: "/videos/fordvideo.mp4",
-    title: "Ford Bronco",
-    age: 2026,
-    label: "Engine bay detail | Interior valet",
-  },
+  }  
 ]
 
 export function SwipeableCards() {
