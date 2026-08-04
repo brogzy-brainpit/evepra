@@ -12,9 +12,9 @@ function Section3() {
     <div className='relative flex justify-center items-center'>
    <div className='max-w-[40em] lg:max-w-[50em] relative'>
    <Heading3 className="text-balance justify-center">
-  <span>We are a </span>
+  <span>Every finish tells a story of </span>
   <em className="relative inline-block font-custom2 font-light">
-    <span className='ml-[0.2em]'>young, </span>
+    <span className='ml-[0.2em]'>meticulous </span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
@@ -33,11 +33,11 @@ function Section3() {
     </svg>
   </em>
 
-  <span >future-proof team of 49 </span>
-  <span>&nbsp;digitally native </span>
+  <span >craftsmanship and </span>
+  <span>&nbsp;uncompromising</span>
 
   <em className="relative inline-block font-light font-custom2">
-    <span className='ml-[0.2em]' >wunderkinder.</span>
+    <span className='ml-[0.2em]' >attention</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
@@ -56,7 +56,7 @@ function Section3() {
     </svg>
   </em>
 
-  <span> &nbsp;not to brag!</span>
+  <span> &nbsp;to detail.</span>
 </Heading3>
 
     <div className='flex justify-center'>
