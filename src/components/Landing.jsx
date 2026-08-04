@@ -11,6 +11,7 @@ import LandingEffect from '@/effects/LandingEffect';
 import { useHeaderColor } from '@/providers/ColorProvider';
 import Socials from './Socials';
 import Section from '@/layout/Section';
+import LandingVideo from './LandingVideo';
 
 function Landing({preLoaderOut}) {
   const { setActiveSection } = useHeaderColor();
@@ -88,16 +89,8 @@ function Landing({preLoaderOut}) {
         allow="autoplay; encrypted-media"
         allowFullScreen
       ></iframe> */}
-      <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-x z-[2]  min-w-full min-h-full w-[177.77vh] h-[100vh] object-cover"
-          >
-            <source src="/videos/hero.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+      
+          <LandingVideo preLoaderOut={preLoaderOut} link="/videos/exoticcar.mp4"/>
       <div className=' absolute z-10 top-0 left-0 bg-neutral-800/50 h-full w-full inset-0'/>
 <div className=' lg:col-start-3 z-10 col-span-full lg:col-span-8 relative h-full w-full flex items-end justify-center pb-[4em] bgslate-500'>
   <motion.h2 className='text-white text-cursor max-w-[10em] break-word text-heading2 leading-[1] tracking-[-0.03em] capitalize owercase text-center justify-center font-custom font-black ' initial='initial' exit='exit' animate={preLoaderOut?'animate':'initial'} variants={parent} >

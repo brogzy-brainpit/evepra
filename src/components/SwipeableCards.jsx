@@ -1,49 +1,49 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
 const cards = [
   {
     id: 1,
-    title: "Alex Rivera",
-    age: 28,
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/professional-portrait-person-casual-ydONC45Ij8txKVZPjnU4EMPL5Q0axz.jpg",
-    label: "Adventure seeker | Coffee enthusiast | Dog lover",
+    type: "video",
+    src: "/videos/mclarenvideo.mp4",
+    title: "McLaren Artura",
+    age: 2026,
+    label: "Paint enhancement | Ceramic coating",
   },
   {
     id: 2,
-    title: "Jordan Chen",
-    age: 26,
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/diverse-friends-city-cafe-trjrPcJB5WUSprmit38.png",
-    label: "Artist | Traveler | Foodie",
+    type: "video",
+    src: "/videos/Lambovideo.mp4",
+    title: "Lamborghini Huracán",
+    age: 2026,
+    label: "Interior detail | Exterior detail",
   },
   {
     id: 3,
-    title: "Sam Taylor",
-    age: 30,
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/modern-workspace-fPRdiX2SVrHOrIFFfk62G3mRUeZYIZ.png",
-    label: "Tech enthusiast | Gamer | Music lover",
+    type: "video",
+    src: "/videos/ferrarivideo.mp4",
+    title: "Ferrari 488 GTB",
+    age: 2026,
+    label: "Paint correction | Gloss enhancement",
   },
   {
     id: 4,
-    title: "Morgan Lee",
-    age: 27,
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/red-fabric-material-texture-qImvrJtZs5nziyhdPC0RrSbY5ct2X3.jpg",
-    label: "Fitness junkie | Bookworm | Nature lover",
+    type: "image",
+    src: "/detailing/lambourus.jpg",
+    title: "Lamborghini Urus",
+    age: 2026,
+    label: "Ceramic coating | Wheel detailing",
   },
   {
     id: 5,
-    title: "Casey Brooks",
-    age: 29,
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/technology-innovation-eEsIt5OvqzfmU3baUCPoPNvLigQB1o.jpg",
-    label: "Photographer | Dancer | Beach bum",
+    type: "video",
+    src: "/videos/fordvideo.mp4",
+    title: "Ford Bronco",
+    age: 2026,
+    label: "Engine bay detail | Interior valet",
   },
 ]
 
@@ -52,16 +52,42 @@ export function SwipeableCards() {
   const [scaleFactor, setScaleFactor] = useState(1)
   const [swipeThreshold, setSwipeThreshold] = useState(120)
 
-  // ✅ Dynamically recalculate based on screen size
+  // Store refs to videos
+  const videoRefs = useRef({})
+
+  // Responsive updates
   useEffect(() => {
     const updateScale = () => {
       setScaleFactor(Math.min(window.innerWidth / 430, 1))
       setSwipeThreshold(window.innerWidth < 640 ? 60 : 120)
     }
+
     updateScale()
+
     window.addEventListener("resize", updateScale)
+
     return () => window.removeEventListener("resize", updateScale)
   }, [])
+
+  // Play only the visible video's card
+  useEffect(() => {
+    cards.forEach((card, index) => {
+      if (card.type !== "video") return
+
+      const video = videoRefs.current[card.id]
+
+      if (!video) return
+
+      const offset = (index - current + cards.length) % cards.length
+
+      if (offset === 0) {
+        video.play().catch(() => {})
+      } else {
+        video.pause()
+        video.currentTime = 0
+      }
+    })
+  }, [current])
 
   const handleSwipe = (direction) => {
     if (direction === "right") {
@@ -73,15 +99,15 @@ export function SwipeableCards() {
 
   return (
     <div className="py-10 flex items-center justify-center w-full overflow-hidden">
-      <div className="relative w-[65vw]  sm:max-w-[14em] md:max-w-[20em] lg:max-w-[25em] aspect-[3/4] select-none">
+      <div className="relative w-[65vw] sm:max-w-[14em] md:max-w-[20em] lg:max-w-[25em] aspect-[3/4] select-none">
         {cards.map((card, index) => {
           const offset = (index - current + cards.length) % cards.length
+
           let scale = 1 - Math.abs(offset) * 0.06
           let y = offset * 40 * scaleFactor
           let rotate = offset * 4
           let x = offset * 50 * scaleFactor
 
-          // ✅ Custom layout tweaks
           if (offset === 4 || offset === 3) {
             rotate = offset === 4 ? 14 : 20
             scale = offset === 4 ? 0.88 : 0.8
@@ -99,7 +125,7 @@ export function SwipeableCards() {
           return (
             <motion.div
               key={card.id}
-              className="cursor-[url('https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef4b_cursor-drag.svg'),_grab] absolute top-0 left-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border-4 border-white"
+              className=" cursor-[url('https://cdn.prod.website-files.com/683703490bc01e1b8c052e06/68384fb014875f192dfcef4b_cursor-drag.svg'),_grab] absolute top-0 left-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border-4 border-white"
               style={{
                 zIndex: (() => {
                   let z = cards.length - offset
@@ -128,20 +154,35 @@ export function SwipeableCards() {
                 if (info.offset.x < -swipeThreshold) handleSwipe("left")
               }}
             >
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                draggable={false}
-                className="w-full absolute h-full object-cover pointer-events-none select-none"
-              />
+              {card.type === "image" ? (
+                <Image
+                  src={card.src}
+                  alt={card.title}
+                  fill
+                  draggable={false}
+                  className="absolute h-full w-full object-cover pointer-events-none select-none"
+                />
+              ) : (
+               <video
+    ref={(el) => {
+        if (el) videoRefs.current[card.id] = el
+    }}
+    src={card.src}
+    muted
+    loop
+    playsInline
+    preload={offset <= 1 || offset === 5 ? "metadata" : "none"}
+    className="absolute h-full w-full object-cover pointer-events-none select-none"
+/>
+              )}
 
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                <h2 className="text-white text-lg sm:text-xl font-semibold">
-                  {card.title}, {card.age}
+              <div className="absolute flex  flex-col gap-2 bottom-0 left-0 right-0 px-2 py-10 bg-gradient-to-t from-black/70 to-transparent">
+                <h2 className="text-white font-custom text-heading3 leading-[1] font-semibold">
+                   {card.title}
                 </h2>
-                <span className="bg-white/20 text-white text-xs sm:text-sm px-2 py-1 rounded-md">
-                  {card.label}
+
+                <span className="bg-white/20 max-w-max font-body text-white text-para leading-[1] px-[4px] py-[2px] rounded-md">
+                  {card.label} 
                 </span>
               </div>
             </motion.div>
