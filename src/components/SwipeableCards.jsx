@@ -172,7 +172,7 @@ export function SwipeableCards() {
     loop
     playsInline
     preload={offset <= 1 || offset === 5 ? "metadata" : "none"}
-    className="absolute h-full w-full object-cover pointer-events-none select-none"
+    className="absolute h-full w-full object-cover pointer-events-none l select-none"
 />
               )}
 
