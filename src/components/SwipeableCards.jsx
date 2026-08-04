@@ -16,7 +16,7 @@ const cards = [
   {
     id: 2,
     type: "video",
-    src: "/videos/Lambovideo.mp4",
+    src: "/videos/lambovideo.mp4",
     title: "Lamborghini Huracán",
     age: 2026,
     label: "Interior detail | Exterior detail",
@@ -171,7 +171,8 @@ export function SwipeableCards() {
     muted
     loop
     playsInline
-    preload={offset <= 1 || offset === 5 ? "metadata" : "none"}
+    preload="metadata"
+    // preload={offset <= 1 || offset === 5 ? "metadata" : "none"}
     className="absolute h-full w-full object-cover pointer-events-none l select-none"
 />
               )}
