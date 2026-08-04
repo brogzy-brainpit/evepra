@@ -9,6 +9,7 @@ const cards = [
     id: 1,
     type: "video",
     src: "/videos/mclarenvideo.mp4",
+    playbackRate: 1.4,
     title: "McLaren Artura",
     age: 2026,
     label: "Paint enhancement | Ceramic coating",
@@ -16,7 +17,8 @@ const cards = [
   {
     id: 2,
     type: "video",
-    src: "/videos/lambovideo.mp4",
+    src: "/videos/bentleyvideo.mp4",
+    playbackRate: 1.6,
     title: "Lamborghini Huracán",
     age: 2026,
     label: "Interior detail | Exterior detail",
@@ -25,6 +27,7 @@ const cards = [
     id: 3,
     type: "video",
     src: "/videos/ferrarivideo.mp4",
+    playbackRate: 1.4,
     title: "Ferrari 488 GTB",
     age: 2026,
     label: "Paint correction | Gloss enhancement",
@@ -71,23 +74,26 @@ export function SwipeableCards() {
 
   // Play only the visible video's card
   useEffect(() => {
-    cards.forEach((card, index) => {
-      if (card.type !== "video") return
+  cards.forEach((card, index) => {
+    if (card.type !== "video") return
 
-      const video = videoRefs.current[card.id]
+    const video = videoRefs.current[card.id]
 
-      if (!video) return
+    if (!video) return
 
-      const offset = (index - current + cards.length) % cards.length
+    // Set this video's playback speed
+    video.playbackRate = card.playbackRate ?? 1
 
-      if (offset === 0) {
-        video.play().catch(() => {})
-      } else {
-        video.pause()
-        video.currentTime = 0
-      }
-    })
-  }, [current])
+    const offset = (index - current + cards.length) % cards.length
+
+    if (offset === 0) {
+      video.play().catch(() => {})
+    } else {
+      video.pause()
+      video.currentTime = 0
+    }
+  })
+}, [current])
 
   const handleSwipe = (direction) => {
     if (direction === "right") {

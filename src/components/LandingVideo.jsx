@@ -3,17 +3,19 @@ import Image from "next/image"
 
 function LandingVideo({ link, poster, preLoaderOut }) {
   const videoRef = useRef(null)
-  useEffect(() => {
-    const video = videoRef.current
+useEffect(() => {
+  const video = videoRef.current
 
-    if (!video) return
+  if (!video) return
 
-    if (preLoaderOut) {
-      video.play().catch(() => {})
-    } else {
-      video.pause()
-    }
-  }, [preLoaderOut])
+  video.playbackRate = 1.32
+
+  if (preLoaderOut) {
+    video.play().catch(() => {})
+  } else {
+    video.pause()
+  }
+}, [preLoaderOut])
 
   return (
     <>
