@@ -34,7 +34,7 @@ function Section3() {
     </svg>
   </em>
 
-  <span >craftsmanship and </span>
+  <span >craft and </span>
   <span>&nbsp;uncompromising</span>
 
   <em className="relative inline-block font-light font-custom2">
