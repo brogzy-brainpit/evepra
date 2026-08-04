@@ -7,6 +7,7 @@ import useWindow from "./useWindow";
 import Section from "@/layout/Section";
 import CustomBtn from "./CustomBtn";
 import { useHeaderColor } from "@/providers/ColorProvider";
+import CTA from "./CTA";
 
 export const random = (min=-40, max=200) => Math.random() * (max - min) + min;
 
@@ -195,11 +196,18 @@ const opacity =useSpring(useTransform(scrollYProgress, [start,end], [0,1]),{ sti
             <motion.p  className="mb-4 text-para text-center text-brand-black font-body text-balance max-w-[32em]">
               {paragraph}
             </motion.p>
-            <CustomBtn>
+            {/* <CustomBtn>
               <span className='flex items-center gap-2 links-cursor '>
                 book an appointment
               </span>
-            </CustomBtn>
+            </CustomBtn> */}
+            <div className='flex justify-center'>
+                   <CTA  href='tel:+971 50 123 4567'
+              className="text-brand-black mt[2em] text-para "
+            >
+              Book an appointment
+            </CTA>
+                  </div>
       </motion.div>
 
           </div>
