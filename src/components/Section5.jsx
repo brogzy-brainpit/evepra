@@ -91,9 +91,9 @@ function Section5
        <Heading2 className='mb-32 !text-black font-custom'>
       
     <CTA  href='tel:+971 50 123 4567'
-                 className="text-brand-black mt[2em] text-para "
+                 className="text-brand-black mt-[-.92em] text-para leading-[.8]"
                >
-                 call us
+                 Call us
                </CTA>
     <span className='mr-[0.3em]'>if you need</span>
    
@@ -163,12 +163,16 @@ function Section5
        </div>
 
        <div className="flex my-[6em] items-center justify-center">
-
-<CustomBtn>
+ <CTA  href={'/services'}
+                 className="text-brand-black mt[2em] text-heading3 "
+               >
+                 other services
+               </CTA>
+{/* <CustomBtn>
   <Link scroll={false} href={'/services'} className='links-cursor flex items-center gap-2 '>
   other services
   </Link>
-</CustomBtn>
+</CustomBtn> */}
        </div>
       </section>
     </div>
