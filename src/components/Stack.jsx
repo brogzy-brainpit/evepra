@@ -161,7 +161,7 @@ function Stack() {
           )
         })}
 
-        <div className='absolute top-0 h-full w-full'>
+        <div className='absolute z-10 top-0 h-full w-full'>
           <Section className='h-full'>
             <GridColumn className='h-full w-full'>
 
