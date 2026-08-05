@@ -53,7 +53,7 @@ function AnimatedText({
   };
 
   return (
-    <div className=" relative h-full w-full  z-[5] bgslate-500">
+    <div className=" relative h-full w-full  z[5] bgslate-500">
       <motion.h2
         className="break-word"
         initial="initial"

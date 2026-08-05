@@ -12,6 +12,7 @@ import Section3 from "@/components/Section3";
 import ColoredComponent from "@/components/ColoredComponent";
 import HorizontalTextWavy from "@/components/HorizontalTextWavy";
 import { secondaryColor, whiteColor } from "../../data";
+import Stack from "@/components/Stack";
 
 function PageContent() {
   const { activeSection } = useHeaderColor();
@@ -60,6 +61,9 @@ const menutextt = menutext[activeSection] || "#2D7864";
      </ColoredComponent>
      <ColoredComponent section="Section2"  >
           <Section3 />
+     </ColoredComponent>
+     <ColoredComponent section="Section2"  >
+          <Stack/>
      </ColoredComponent>
      <ColoredComponent section="Section1"  >
    <Section5 />
