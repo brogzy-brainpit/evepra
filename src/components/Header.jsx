@@ -13,6 +13,7 @@ import { MenuIcon } from "lucide-react";
 import clsx from "clsx";
 import { useMediaQuery } from "react-responsive";
 import Socials from "./Socials";
+import AnimatedText from "./AnimatedText";
 
 function Header({activeColor,menutextt,preLoaderOut}) {
 
@@ -132,7 +133,7 @@ const rotation = useSpring(smoothes, {
       transition={{duration:0.4,delay:0}}
         className=" bg-red300 shadowlg backdropblur-lg  roundedfull w-full flex items-center justify-between py-2">
         <div className="flex-1 ">
-            <Link href={"/"} className=" bg-red-500  z-20 overflow-visible  text-center font-custom text-2xl">
+            <Link href={"/"} className="  z-20 overflow-visible  text-center font-custom text-2xl">
             {/* <h2 className={"relative circular font-bold text-white text-4xl leading-[1] flex items-end"}>alfred <span className="absolute bottom-1 -right-[10px] ml-[4px] w-[8px] h-[8px] rounded-full bg-white"></span></h2> */}
        <StaggerTextHover preLoaderOut={preLoaderOut} activeColor={activeColor } className="links-cursor relative w-[7em] " text={["E", "v", "e" ,"p", "r" ,"a",'*']}/>
       
@@ -164,15 +165,17 @@ const rotation = useSpring(smoothes, {
 <div className="flex-1 flex justify-end items-center relative z-20">
 
             <div className="relative bg-blue500 ">
-              <motion.div variants={menu} animate={burgerMenu?'opened':'closed'} exit="closed" initial="closed" className="z-10 absolute overflow-clip    rounded-[1em] bg-brand-secondary box-border ">
+              <motion.div variants={menu} animate={burgerMenu?'opened':'closed'} exit="closed" initial="closed" className="z-10 absolute overflow-clip    rounded-[1em] bg-brand-secondary shadow-2xl box-border ">
      <AnimatePresence>
         {burgerMenu &&  <div className="h-full">
         <motion.div variants={burgerLinksParent} initial={'initial'} animate={'enter'}  exit={'exit'} className= "flex-[2] bgpurple-700 flex flex-col gap-2 py-6 pt-[5em] pl-[1.3em] pr-[0.8em] pb-[2em]  ">
-                     {Links.map(({title,url})=>{
+                     {Links.map(({title,url},index)=>{
                        return (
-                        <motion.div variants={burgerLinks} className="perspective" >
+                        <motion.div  className="perspective" >
 
-                          <Link className="text-heading3 links-cursor text-white font-custom italic font-black capitalize cursor-pointer" href={url}>{title}</Link>
+                          <Link className="text-heading3 links-cursor text-white font-custom italic font-black cursor-pointer" href={url}>
+                          <AnimatedText delayChildren={.3+index * 0.18} preLoaderOut={preLoaderOut} text={title} />
+                          </Link>
                         </motion.div>
                       )
                      })}
