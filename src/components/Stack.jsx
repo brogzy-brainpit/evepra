@@ -140,7 +140,7 @@ function Stack() {
                 '
               >
                 <div className="flex items-center gap-1 text-[#D4AF37] text-xl mb-6">
-                  ★★★★★
+                  <img src="/truus/starss.svg" alt="Stars" className="w-40"/>
                 </div>
 
                 <p className="text-white/90 text-lg leading-relaxed mb-8">
@@ -169,18 +169,18 @@ function Stack() {
                 <div className='mix-blend-difference flex items-center lg:items-start h-full w-full'>
                   <motion.h2
                     style={{ x: text01X }}
-                    className='text-heading1 font-custom uppercase text-white'
+                    className='text-heading1 font-custom font-black ppercase text-white'
                   >
                     Trusted
                   </motion.h2>
                 </div>
               </div>
 
-              <div className="relative col-span-full lg:col-span-4 col-start-3 lg:col-start-9 h-full">
+              <div className="relative col-span-full lg:col-span-6 col-start-3 lg:col-start-7 h-full">
                 <div className='mix-blend-difference flex items-center lg:items-end h-full w-full'>
                   <motion.h2
                     style={{ x: text02X }}
-                    className='text-heading1 font-custom uppercase text-white'
+                    className='text-heading1 font-custom font-black ppercase text-white'
                   >
                     Reviews
                   </motion.h2>
