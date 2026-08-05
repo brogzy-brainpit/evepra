@@ -9,13 +9,14 @@ function AnimatedText({
   preLoaderOut = true,
   text = "mainstream",
   delayChildren = 0.2,
+  staggerChildren= 0.03,
 }) {
   const parent = {
     initial: {},
     animate: {
       transition: {
         delayChildren,
-        staggerChildren: 0.03,
+        staggerChildren,
       },
     },
     exit: {

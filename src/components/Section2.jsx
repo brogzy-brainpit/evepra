@@ -91,8 +91,7 @@ function Section2() {
     </div>
       <GridColumn>
           <Paragraph className="text-black z-[9] px-5 pt-[80px] bg-slate600  lg:col-start-4 col-span-full lg:col-span-6 text-center">
-
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus impedit magnam quis voluptatum aperiam aspernatur recusandae porro. Ad optio impedit itaque cupiditate error est earum voluptatibus nisi vero iusto. Animi?
+            From cherished classics to cutting-edge supercars, we deliver meticulous detailing that restores brilliance, protects every finish, and ensures every vehicle leaves looking flawless, refined, and ready for every journey.
 </Paragraph>
         </GridColumn> 
 
