@@ -13,7 +13,7 @@ import ScaleUpContent from '@/effects/ScaleUpContent'
 import CTA from './CTA'
 import Section from '@/layout/Section'
 
-function footer() {
+function Footer() {
 
   return (
     <div className='bg-brand-secondary w-full min-h-vh h-[90svh] md:h-svh lg:h-svh relative'>
@@ -118,4 +118,4 @@ function footer() {
   )
 }
 
-export default footer
+export default Footer
