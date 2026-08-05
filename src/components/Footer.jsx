@@ -43,19 +43,19 @@ function Footer() {
  <div className=" mb-6 grid grid-cols-1 md:grid-cols-3 gap-2  w-full mdw-[50%]">
 
             <div className={`w-full my-4 items-end md:items-start justify-between flex gap-[4px] flex-col`}>
-         <p  className=' text-brand-white font-custom2 font-normal italic links-cursor circular text-para  leading-pa3a uppercase'> Address</p>
+         <p  className=' text-brand-white font-custom2 font-normal italic links-cursor circular text-para  leading-pa3a capitalize'> Address</p>
          <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>general Streen 45-FB</p>
          <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>1017 MT Kaduna</p>
          <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>Nigeria</p>
           </div>
 
-          <div className={`w-full my-4 items-start md:items-center justify-between flex gap-[2px] flex-col  borde border-brand-accent`}>
-         <p  className=' text-brand-white font-custom2 font-normal italic links-cursor circular text-para  leading-pa3a uppercase'> Let's talk</p>
+          <div className={`w-full my-4 items-start md:items-center justify-betwen flex gap-[2px] flex-col  borde border-brand-accent`}>
+         <p  className=' text-brand-white font-custom2 font-normal italic links-cursor circular text-para  leading-pa3a capitalize'> Let's talk</p>
          <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'> email@domain.com</p>
           </div>
 
-            <div className={`w-full my-4 items-end justify-between flex gap-[4px] flex-col`}>
-         <p  className=' text-brand-white font-custom2 font-normal italic links-cursor circular  text-para  leading-p3ra uppercase'>Policies</p>
+            <div className={`w-full my-4 items-end justify-betwen flex gap-[4px] flex-col`}>
+         <p  className=' text-brand-white font-custom2 font-normal italic links-cursor circular  text-para  leading-p3ra capitalize'>Policies</p>
          <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>Privacy policy</p>
          <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>Terms and conditions
          </p>
