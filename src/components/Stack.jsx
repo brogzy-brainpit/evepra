@@ -155,9 +155,9 @@ function Stack() {
                     </CTA>
                   </h4>
 
-                  <p className="text-white/70 font-body text-xl mt-2">
+                  {/* <p className="text-white/70 font-body text-xl mt-2">
                     {car}
-                  </p>
+                  </p> */}
                 </div>
               </motion.div>
             </div>
