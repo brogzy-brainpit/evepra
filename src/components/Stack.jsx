@@ -131,7 +131,7 @@ function Stack() {
                   w-[82vw]
                   max-w-[520px]
                   rounded-[32px]
-                  border border-white/10
+                  border-2 border-brand-white/85
                   bg-black/95
                   backdrop-blur-xl
                   p-8
