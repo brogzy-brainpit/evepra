@@ -5,6 +5,7 @@ import Section from '@/layout/Section';
 import GridColumn from '@/layout/GridColumn';
 import AnimatedText from './AnimatedText';
 import TextLanding from '@/effects/TextLanding';
+import CTA from './CTA';
 
 function Stack() {
   const { dimension } = useWindow();
@@ -143,16 +144,18 @@ function Stack() {
                   <img src="/truus/starss.svg" alt="Stars" className="w-40"/>
                 </div>
 
-                <p className="text-white/90 text-lg leading-relaxed mb-8">
+                <p className="text-white/90 font-body text-lg leading-relaxed mb-8">
                   "{review}"
                 </p>
 
                 <div className="border-t border-white/10 pt-5">
-                  <h4 className="text-white font-semibold text-xl">
+                  <h4 className="text-white font-custom2 italic font-semibold text-xl">
+                    <CTA href={""} className='text-para'>
                     {name}
+                    </CTA>
                   </h4>
 
-                  <p className="text-white/50 mt-1">
+                  <p className="text-white/70 font-body text-xl mt-2">
                     {car}
                   </p>
                 </div>

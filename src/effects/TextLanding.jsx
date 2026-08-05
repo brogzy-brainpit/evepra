@@ -58,7 +58,7 @@ function TextLanding({preLoaderOut=true}) {
         <ScaleUpContent damping={5} >
 <Magnetic >
 
-        <img initial={{x:80,scale:0}} animate={{x:0,scale:1}} transition={{duration:0.6,ease:'easeOut'}}   src='/truus/smile.svg' className='w-[40px] h-[40px] lg:w-[80px] lg:h-[80px]'/>
+        <img initial={{x:80,scale:0}} animate={{x:0,scale:1}} transition={{duration:0.6,ease:'easeOut'}}   src='/truus/go.svg' className='w-[80px] h-[80px] lg:w-[120px] lg:h-[120px]'/>
 </Magnetic>
         </ScaleUpContent>
       </div>
