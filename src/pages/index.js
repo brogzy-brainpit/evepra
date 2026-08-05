@@ -2,13 +2,10 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import RubberSection from "@/components/RubberSection";
 import { ColorProvider,useHeaderColor } from "@/providers/ColorProvider";
-import {AnimatePresence, motion, time} from 'framer-motion';
-import SmoothScroll from "@/providers/Lenis";
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
 import Section2 from "@/components/Section2";
 import Section5 from "@/components/Section5";
-import Preloader from "@/components/Preloader";
 import { useEffect, useState } from "react";
 import Section4 from "@/components/Section4";
 import Section3 from "@/components/Section3";
@@ -48,7 +45,7 @@ const menutextt = menutext[activeSection] || "#2D7864";
     return ()=>clearTimeout(timer)
   },[])
   return (
-    <SmoothScroll>
+    <main>
 
       <Header preLoaderOut={preLoaderOut}  menutextt={menutextt} activeColor={activeheaderColor} />
      
@@ -70,7 +67,7 @@ const menutextt = menutext[activeSection] || "#2D7864";
 <ColoredComponent section="Section1"  >
    <Section4 />
 </ColoredComponent>
-    </SmoothScroll>
+    </main>
            
     
   );

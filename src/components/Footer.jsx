@@ -9,32 +9,30 @@ import StaggerTextHover from '@/effects/StaggerTextHover'
 import Magnetic from '@/common/Magnetic'
 import Socials from './Socials'
 import Link from 'next/link'
+import ScaleUpContent from '@/effects/ScaleUpContent'
+import CTA from './CTA'
+import Section from '@/layout/Section'
 
 function footer() {
-  const texts=[
-    {text:'aircraft maintainanc',
-      url:'#',background:'pink'
-    }, {text:' maintainance & tracking',
-      url:'#',background:'#059669'
-    }, {text:'aircraft & tracking',
-      url:'#',background:'orange'
-    }
-  ]
+
   return (
-    <div className='bg-brand-accent w-full h-[90svh] relative py-4  flex gap-2 flex-col '>
+    <div className='bg-brand-secondary w-full min-h-vh h-[90svh] md:h-svh lg:h-svh relative'>
 
-      <section className=' relative mt-4 w-full h-full gap-6 container-section container mx-auto'>
-
+      <Section padding={false} className=' px-5 relative w-full flex flex-col justify-between h-full gontainer-section containe m-auto'>
+<div className="flex flex-col">
+{/* phone and email */}
   <div className="flex gap-2 breaker my-6 ">
   {/* Right side - single 50% item */}
-  <div className=" breaker-chil  px-4  items-start justify-end md:justify-start flex   w-[68%]  ">
-         <h3 duration={0.5} delay={0.04} className=' text-white links-cursor font-custom font-bold text-[20px] md:text-[30px] leading-[40px] ' >
-          hello@reserve.com
+  <div className=" breaker-chil   lg:items-start lg:justify-start md:justify-start flex   w-[68%]  ">
+         <h3 duration={0.5} delay={0.04} className=' text-brand-white links-cursor font-custom font-bold text-heading3 ' >
+          <CTA className='text-para leading-[.8]' href="https://instagram.com/memet_lab">hello@reserve.com</CTA>
+          {/* hello@reserve.com */}
           </h3>  
           </div>
-            <div className=" breaker-child px-4  items-start justify-end flex w-[68%]  ">
-         <h3 duration={0.5} delay={0.04} className='links-cursor text-white  font-custom font-bold text-[20px] md:text-[30px] leading-[40px] '>
-          +(234)9063260237
+            <div className=" breaker-child  lg:items-start lg:justify-end flex w-[68%]  ">
+         <h3 duration={0.5} delay={0.04} className='links-cursor text-brand-white  font-custom font-bold text-heading3 '>
+          <CTA className='text-para leading-[.8]' href='tel:+971 50 123 4567'>+(234)9063260237</CTA>
+
           </h3>  
           </div>
           
@@ -42,82 +40,80 @@ function footer() {
 
 </div>
 
- <div className="  p-4 grid grid-cols-1 md:grid-cols-3 gap-2  w-full mdw-[50%]">
-  {/* Left side - stacked items */}
-       {/* <div className={`w-full  items-start gap-2 flex flex-col`}> */}
-            <div className={`w-full  -4 rounded-2xl items-end md:items-start justify-between flex gap-[4px] flex-col`}>
-         
-         <p  className=' text-white links-cursor font-body  text-para  leading-para'>general Streen 45-FB</p>
-         <p  className=' text-white links-cursor font-body  text-para  leading-para'>1017 MT Kaduna</p>
-         <p  className=' text-white links-cursor font-body  text-para  leading-para'>Nigeria</p>
+ <div className=" mb-6 grid grid-cols-1 md:grid-cols-3 gap-2  w-full mdw-[50%]">
+
+            <div className={`w-full my-4 items-end md:items-start justify-between flex gap-[4px] flex-col`}>
+         <p  className=' text-brand-white font-custom2 font-normal italic links-cursor circular text-para  leading-pa3a uppercase'> Address</p>
+         <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>general Streen 45-FB</p>
+         <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>1017 MT Kaduna</p>
+         <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>Nigeria</p>
           </div>
 
-          <div className={`w-full  -4 rounded-2xl items-end md:items-center justify-between flex gap-[2px] flex-col  borde border-brand-accent`}>
-
-         <p  className=' text-white links-cursor circular font-bold text-para  leading-pa3a uppercase'> Let's talk</p>
-         <p  className=' text-white links-cursor font-body  text-para  leading-para'> email@domain.com</p>
-
+          <div className={`w-full my-4 items-start md:items-center justify-between flex gap-[2px] flex-col  borde border-brand-accent`}>
+         <p  className=' text-brand-white font-custom2 font-normal italic links-cursor circular text-para  leading-pa3a uppercase'> Let's talk</p>
+         <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'> email@domain.com</p>
           </div>
-            <div className={`w-full items-end justify-between flex gap-[4px] flex-col`}>
-         
-         <p  className=' text-white links-cursor circular font-bold  text-para  leading-p3ra uppercase'>Policies</p>
-         <p  className=' text-white links-cursor font-body  text-para  leading-para'>Privacy policy</p>
-         <p  className=' text-white links-cursor font-body  text-para  leading-para'>Terms and conditions
+
+            <div className={`w-full my-4 items-end justify-between flex gap-[4px] flex-col`}>
+         <p  className=' text-brand-white font-custom2 font-normal italic links-cursor circular  text-para  leading-p3ra uppercase'>Policies</p>
+         <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>Privacy policy</p>
+         <p  className=' text-brand-white links-cursor font-body  text-para  leading-para'>Terms and conditions
          </p>
 
           </div>
-  
-         
-          
   </div>
 
-
-<div className='flex flex-col justify-center relative h[200px] lg:h-[300px] overflow-x-clip'>
-   <div className="relative h-ft w-full bgblack text-white links-cursor p10" >
-   <div className="relative h-ft w-full bgblack text-white links-cursor p10 [clip-path:inset(0_0_25%_0)]" >
- <StaggerTextHover inView={true} className='w-full'/>
+</div>
+  {/* down */}
+<div className="flex flex-col">
+  {/* the brand name and its icons */}
+   <div className="relative overflow-x-clip h-ft w-full bgblack text-brand-white links-cursor p10" >
+   <div className="relative h-ft w-full bgblack text-brand-white links-cursor p10 [clip-path:inset(0_0_25%_0)]" >
+ <StaggerTextHover  inView={true} className='w-full'/>
     </div>
-    <div className='absolute top-0 bgpurple-400 w-full h-full'>
+    <div className='absolute OVERFLCL top-0 bgpurple-400 w-full h-full'>
 
     <div className="absolute top-[10%] translate-y-[30%] translate-x-[30%] left-0 w-full h-full flex items-center justify-center">
-<img src="/assets/bucket.svg" className='w-[10vw] lg:w-[6vw]' alt="Logo"/>
+<ScaleUpContent once={false} stiffness={180} damping={10} margin='0px'  >
+<img src="/assets/bucket.svg" className='w-[10vw] lg:w-[10vw]' alt="Logo"/>
+</ScaleUpContent>
     </div>
     <div className="absolute top-[-70%] translate-y-[30%] translate-x-[-70%] left-[30%] w-full h-full flex items-center justify-center">
-<img src="/assets/camera.svg" className='w-[10vw] lg:w-[8vw]' alt="Logo"/>
+<ScaleUpContent once={false} stiffness={180} damping={10} margin='0px' delay={.2}  >
+<img src="/assets/camera.svg" className='w-[10vw] lg:w-[10vw]' alt="Logo"/>
+</ScaleUpContent>
     </div>
      <div className="absolute top-[10%] translate-y-[20%] translate-x-[-40%] left-[20%] w-full h-full flex items-center justify-center">
-
-<img src="/assets/time.svg" className='w-[10vw] lg:w-[6vw]' alt="Logo"/>
+<ScaleUpContent once={false} stiffness={180} damping={10} margin='0px' delay={.3}  >
+<img src="/assets/time.svg" className='w-[10vw] lg:w-[10vw]' alt="Logo"/>
+</ScaleUpContent>
+    </div>
+     <div className="absolute top-[10%] translate-y-[20%] translate-x-[-20%] left-[20%] w-full h-full flex items-center justify-center">
+<ScaleUpContent once={false} stiffness={180} damping={10} margin='0px' delay={.5}  >
+<img src="/assets/smile.svg" className='w-[10vw] lg:w-[10vw]' alt="Logo"/>
+</ScaleUpContent>
     </div>
      <div className="absolute top-0 translate-x-[20%] left-0 w-full h-full flex items-center justify-center">
-<img src="/assets/eyes.svg" className='w-[10vw] lg:w-[8vw]' alt="Logo"/>
+<ScaleUpContent once={false} stiffness={180} damping={10} margin='0px' delay={.4}  >
+<img src="/assets/eyes.svg" className='w-[10vw] lg:w-[10vw]' alt="Logo"/>
+</ScaleUpContent>
     </div>
     </div>
   </div>
-
+  {/* the socials and bymemet */}
   <div className="relative py-4 md:py-[30px] flex gap-2  w-full ">
   {/* Left side - stacked items */}
       <Socials/>
             <div className={`w-full items-center justify-end flex`}>
          
-         <p  className=' text-white links-cursor font-custom  text-para  capitalize'>code by <Link href="https://instagram.com/memet_lab" className="links-cursor underline" target="_blank" rel="noopener noreferrer">memet</Link> </p>
+         <p  className=' text-brand-white links-cursor font-custom  text-para  capitalize'><CTA className='text-para' href="https://instagram.com/memet_lab">code by Memet</CTA></p>
 
           </div>
+</div>
   
-         
-          
-
-</div>
 </div>
 
-   
-
-
-
-
- 
-      
-      </section>
+      </Section>
       </div>
   )
 }

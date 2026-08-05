@@ -41,7 +41,7 @@ module.exports = {
       colors:{
           'brand-text':"#1c2218",
         'brand-white':"#f5fbe7",
-        'brand-secondary':"#A80D2C", //blue best
+        'brand-secondary':"#4B59C5", //blue best
         'brand-accent':"#000000", //accent for links, hover state 
         'brand-black':"#101718",
         'brand-text':"#1c2218",

@@ -11,6 +11,7 @@ import "../styles/embla.css";
 import "../styles/menu.css";
 import Footer from "@/components/Footer";
 import StaggerTextHover from '@/effects/StaggerTextHover';
+import SmoothScroll from '@/providers/Lenis';
 
 const Sans = DM_Sans({
   subsets: ["latin"],
@@ -93,6 +94,8 @@ const [pageName,setPageName]= useState(router.pathname)
   })
 }
   return (
+    <SmoothScroll>
+    
     <AnimatePresence
       mode="wait"
       onExitComplete={() => window.scrollTo({ top: 0, behavior: "instant" })}
@@ -149,5 +152,7 @@ const [pageName,setPageName]= useState(router.pathname)
         
       </div>
     </AnimatePresence>
+    </SmoothScroll>
+
   );
 }
